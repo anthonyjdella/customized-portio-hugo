@@ -28,8 +28,8 @@
             </svg>
           </div>
           <div class="mb-5">
-            <span class="top-title pre-line">{{ .topTitle }}</span>
-            {{ .content | markdownify }}
+            <span class="top-title">{{ partial "wave" .}}{{ .topTitle }}</span>
+            <span class="p">{{ .content | markdownify }}</span>
           </div>
           <a type="button" class="btn btn-lg btn-primary btn-zoom"
             href="{{ .buttonURL | absURL }}">{{ .buttonName }}</a>

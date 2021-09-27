@@ -51,16 +51,18 @@
       }
     }
     span {
-      font-size: 24px;
+      font-size: 35px;
       position: relative;
-      display: block;
-      margin: 0 0 20px 30px;
+      margin: 0 0 0 0;
+      color: #343a40 !important;
       @include desktop {
         display: inline-block;
       }
     }
     p {
       font-size: $font-size-lg;
+      color: #343a40 !important;
+      font-size: 35px;
     }
   }
   &_figure {
