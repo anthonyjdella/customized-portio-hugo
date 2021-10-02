@@ -6,6 +6,9 @@ I've changed the layout, navigation bar, and more. These are specific changes fo
 
 ---
 
+<details>
+  <summary>Click to expand README.md of the source repository!</summary>
+
 Portio is a simple, minimal and responsive Portfolio Hugo Theme. Portio is well organized, well-formatted and named accordingly so it’s easy to change any and all of the design. Portio is built with Bootstrap 4. You can customize it very easy to fit your needs.
 
 ## Table of Contents
@@ -51,3 +54,5 @@ Have some question or facing any technical trouble feel free to [Contact Us](htt
 ## Licensing
 
 This Repository is licensed under the [MIT](https://github.com/StaticMania/portio-hugo/blob/master/LICENSE) License
+
+</details>
