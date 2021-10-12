@@ -1,5 +1,13 @@
-<h1>Portio Hugo</h1>
-<img src="https://user-images.githubusercontent.com/25920065/91142412-8a895c80-e6d2-11ea-93dd-5de59ce60adf.jpg" alt="screenshot" width="100%">
+<h1> Customized Portio Hugo</h1>
+
+🖼️ This is a slightly tweaked version of the [Portio](https://github.com/StaticMania/portio-hugo) Hugo theme by StaticMania.
+
+I've changed the layout, navigation bar, and more. These are specific changes for my [website](www.anthonydellavecchia.com), so I recommend that you fork the official repo from StaticMania (linked above).
+
+---
+
+<details>
+  <summary>Click to expand README.md of the source repository!</summary>
 
 Portio is a simple, minimal and responsive Portfolio Hugo Theme. Portio is well organized, well-formatted and named accordingly so it’s easy to change any and all of the design. Portio is built with Bootstrap 4. You can customize it very easy to fit your needs.
 
@@ -47,6 +55,4 @@ Have some question or facing any technical trouble feel free to [Contact Us](htt
 
 This Repository is licensed under the [MIT](https://github.com/StaticMania/portio-hugo/blob/master/LICENSE) License
 
-## Hire
-
-Need help to build HUGO websites with your custom requirements. Feel free to [contact](https://staticmania.com/contact/) us. We provide custom development service for HUGO.
+</details>
