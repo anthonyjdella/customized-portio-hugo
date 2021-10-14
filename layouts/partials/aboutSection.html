@@ -42,11 +42,29 @@
                         <div class="mb-4 text-light">
                             {{ .content | markdownify}}
                         </div>
+                        <script>
+                        function theme(){
+                            var d = document.getElementById("list");
+                            var displayText = d.options[d.selectedIndex].text;
+                            document.getElementById("resumeRegistry").href = "https://resume.anthonydellavecchia.com/anthonyjdella?customTheme=" + displayText
+                        }
+                        </script>
+
                         <div>
-                            <a class="btn btn-primary mr-3 btn-zoom"
-                                href="{{ .button1Target | absURL }}">{{ .button1Name }}</a>
-                            <a class="btn btn-outline-primary btn-zoom" href="{{ .button2Target | absURL }}">
-                                {{ .button2Name }} </a>
+                            <select class="btn btn-primary mr-3 btn-zoom" id="list" onchange="theme();">
+                                <option value="macchiato" selected="" disabled="" hidden="">Select a theme</option>
+                                <option value=“actual”>Actual</option>
+                                <option value=“elegant”>Elegant</option>
+                                <option value=“github”>GitHub</option>
+                                <option value=“macchiato”>Macchiato</option>
+                                <option value=“rocketspacer”>Rocketspacer</option>
+                                <option value=“simple-red”>Simple-Red</option>
+                                <option value=“spartan”>Spartan</option>
+                                <option value=“stackoverflow”>Stackoverflow</option>
+                            </select>
+                            <!-- <a class="btn btn-primary mr-3 btn-zoom"
+                                href="{{ .button1Target | absURL }}">{{ .button1Name }}</a> -->
+                            <a class="btn btn-outline-primary btn-zoom" id="resumeRegistry" href="{{ .button2Target }}">{{ .button2Name }} </a>
                         </div>
                     </div>
                 </div>
