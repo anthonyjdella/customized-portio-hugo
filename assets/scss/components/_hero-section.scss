@@ -93,18 +93,17 @@
     }
     &-popup {
       position: absolute;
-      bottom: 80px;
+      bottom: 0px;
       left: 0;
       transform: translateX(-50%);
       transition: all 0.3s ease;
       @include desktop {
         bottom: -40px;
         left: 50%;
+        width: 70%;
         transform: translateX(-50%);
       }
       .thumb {
-        height: 160px;
-        width: 250px;
         border: 1px solid #707070;
         border-radius: 20px;
         overflow: hidden;
@@ -116,7 +115,6 @@
           left: 0;
           height: 100%;
           width: 100%;
-          background: rgba(0, 0, 0, 0.6);
           z-index: 1;
         }
         img {
@@ -127,12 +125,10 @@
       }
       .popup-button {
         position: absolute;
-        top: 50%;
-        left: 50%;
         transform: translate(-50%, -50%);
         height: 60px;
         width: 60px;
-        background: #ffffff;
+        background: $primary;
         border-radius: 50%;
         z-index: 2;
         transition: all 0.3s ease;
@@ -144,11 +140,11 @@
           transition: all 0.3s ease;
 
           path {
-            fill: $primary;
+            fill: #ffffff;
           }
         }
         &:hover {
-          background-color: $primary;
+          background-color: #2a4eff;
           svg {
             path {
               fill: #ffffff;
