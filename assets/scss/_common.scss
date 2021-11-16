@@ -8,3 +8,21 @@
   margin-right: 0;
 }
 
+mark {
+  background-color: #1b2031;
+  color: white;
+}
+
+mark:hover {
+  background-color: #5d78ff;
+  color: white;
+}
+
+:root {
+  --microtip-transition-duration: 0.18s;
+  --microtip-transition-delay: 0s;
+  --microtip-transition-easing: ease-out;
+  --microtip-font-size: 20px;
+  --microtip-font-weight: normal;
+  --microtip-text-transform: none;
+}
