@@ -63,12 +63,27 @@ a.text-dark {
     }
 }
 
+.wave-container {
+    transform: rotate(-10deg);
+    left: -80px;
+    top: -50px;
+    position: relative;
+}
+
 .wave:hover {
     animation-name: wave-animation;
     animation-duration: 3.0s;
     animation-iteration-count: infinite;
     transform-origin: 70% 70%;
     display: inline-block !important;
+}
+
+.wave:hover + .hello-there {
+    opacity: 1;
+}
+
+.hello-there {
+    opacity: 0;
 }
 
 @keyframes wave-animation {
