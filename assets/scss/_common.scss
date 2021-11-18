@@ -26,3 +26,13 @@ mark:hover {
   --microtip-font-weight: normal;
   --microtip-text-transform: none;
 }
+
+::selection {
+  background: violet;
+  color: white;
+}
+
+::-moz-selection {
+  background: violet;
+  color: white;
+}
