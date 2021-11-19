@@ -82,9 +82,33 @@ a.text-dark {
     opacity: 1;
 }
 
+.bubble {
+    opacity: 0;
+    height: 2em;
+    width: 50%;
+    display: inline-block;
+    position: relative;
+    bottom: .75em;
+}
+
 .hello-there {
     opacity: 0;
+    position: relative;
+    left: -3.7em;
+    display: inline-block;
+    bottom: .6em;
 }
+
+.poke:hover + .bubble {
+    opacity: 1;
+}
+
+
+.poke:hover + .bubble + .hello-there {
+    opacity: 1;
+    color: #2a4eff;
+}
+
 
 @keyframes wave-animation {
     0% {

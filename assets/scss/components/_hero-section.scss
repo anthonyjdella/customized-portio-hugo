@@ -123,8 +123,16 @@
           object-fit: cover;
         }
       }
+      .thumb:hover + .popup-button{
+        opacity: 1;
+      }
+      .popup-button:hover {
+        opacity: 1;
+      }
       .popup-button {
         position: absolute;
+        top: 50%;
+        left: 50%;
         transform: translate(-50%, -50%);
         height: 60px;
         width: 60px;
@@ -132,6 +140,7 @@
         border-radius: 50%;
         z-index: 2;
         transition: all 0.3s ease;
+        opacity: 0;
         svg {
           position: absolute;
           top: 50%;

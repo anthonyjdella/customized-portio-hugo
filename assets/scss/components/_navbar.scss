@@ -10,13 +10,6 @@
         margin: 10px 10px 0;
         border-radius: 5px;
     }
-    .navbar-brand {
-        img {
-            @include desktop {
-                width: 80%;
-            }
-        }
-    }
     &.nav__color__change {
         background: $white;
         padding: 20px 0;
