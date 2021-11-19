@@ -238,3 +238,7 @@
 @include media-breakpoint-up(xl) {
   .modal-xl { max-width: $modal-xl; }
 }
+
+@include media-breakpoint-up(xxl) {
+  .modal-xxl { max-width: $modal-xxl; }
+}
