@@ -100,7 +100,6 @@
       @include desktop {
         bottom: -40px;
         left: 50%;
-        width: 70%;
         transform: translateX(-50%);
       }
       .thumb {
@@ -108,6 +107,8 @@
         border-radius: 20px;
         overflow: hidden;
         position: relative;
+        width: 17.5em;
+        height: 13em;
         &::before {
           position: absolute;
           content: "";
