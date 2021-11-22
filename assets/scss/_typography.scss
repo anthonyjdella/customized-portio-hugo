@@ -63,81 +63,323 @@ a.text-dark {
     }
 }
 
-.wave-container {
-    transform: rotate(-10deg);
-    left: -80px;
-    top: -50px;
-    position: relative;
-}
-
-.wave:hover {
-    animation-name: wave-animation;
-    animation-duration: 3.0s;
-    animation-iteration-count: infinite;
-    transform-origin: 70% 70%;
-    display: inline-block !important;
-}
-
-.wave:hover + .hello-there {
-    opacity: 1;
-}
-
-.bubble {
-    opacity: 0;
-    height: 2em;
-    display: inline-block;
-    position: relative;
-    bottom: .75em;
-}
-
-.hello-there {
-    opacity: 0;
-    position: relative;
-    left: -3.25em;
-    display: inline-block;
-    bottom: .6em;
-}
-
-.poke:hover + .bubble {
-    opacity: 1;
-}
-
-
-.poke:hover + .bubble + .hello-there {
-    opacity: 1;
-    color: #2a4eff;
-}
-
-
-@keyframes wave-animation {
-    0% {
-        transform: rotate( 0.0deg)
-    }
-    10% {
-        transform: rotate(14.0deg)
-    }
-    20% {
-        transform: rotate(-8.0deg)
-    }
-    30% {
-        transform: rotate(14.0deg)
-    }
-    40% {
-        transform: rotate(-4.0deg)
-    }
-    50% {
-        transform: rotate(10.0deg)
-    }
-    60% {
-        transform: rotate( 0.0deg)
-    }
-    100% {
-        transform: rotate( 0.0deg)
-    }
-}
-
 .werk {
     width: 15%;
     position: absolute;
     left: 75%;
+}
+
+@font-face {
+    font-family: 'Cervanttis';
+    src: url('../fonts/CervanttisRegular.woff2') format('woff2'),
+        url('../fonts/CervanttisRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bogart';
+    src: url('../fonts/BogartTrial-BlackItalic.woff2') format('woff2'),
+        url('../fonts/BogartTrial-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bogart';
+    src: url('../fonts/BogartTrial-Black.woff2') format('woff2'),
+        url('../fonts/BogartTrial-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bogart';
+    src: url('../fonts/BogartTrial-BoldItalic.woff2') format('woff2'),
+        url('../fonts/BogartTrial-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bogart';
+    src: url('../fonts/BogartTrial-ExtraboldItalic.woff2') format('woff2'),
+        url('../fonts/BogartTrial-ExtraboldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bogart';
+    src: url('../fonts/BogartTrial-Bold.woff2') format('woff2'),
+        url('../fonts/BogartTrial-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bogart';
+    src: url('../fonts/BogartTrial-ExtralightItalic.woff2') format('woff2'),
+        url('../fonts/BogartTrial-ExtralightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bogart';
+    src: url('../fonts/BogartTrial-Extralight.woff2') format('woff2'),
+        url('../fonts/BogartTrial-Extralight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bogart';
+    src: url('../fonts/BogartTrial-Italic.woff2') format('woff2'),
+        url('../fonts/BogartTrial-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bogart';
+    src: url('../fonts/BogartTrial-Extrabold.woff2') format('woff2'),
+        url('../fonts/BogartTrial-Extrabold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bogart';
+    src: url('../fonts/BogartTrial-Light.woff2') format('woff2'),
+        url('../fonts/BogartTrial-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bogart';
+    src: url('../fonts/BogartTrial-LightItalic.woff2') format('woff2'),
+        url('../fonts/BogartTrial-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bogart';
+    src: url('../fonts/BogartTrial-MediumItalic.woff2') format('woff2'),
+        url('../fonts/BogartTrial-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bogart';
+    src: url('../fonts/BogartTrial-SemiboldItalic.woff2') format('woff2'),
+        url('../fonts/BogartTrial-SemiboldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bogart';
+    src: url('../fonts/BogartTrial-Medium.woff2') format('woff2'),
+        url('../fonts/BogartTrial-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bogart';
+    src: url('../fonts/BogartTrial-Regular.woff2') format('woff2'),
+        url('../fonts/BogartTrial-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bogart';
+    src: url('../fonts/BogartTrial-ThinItalic.woff2') format('woff2'),
+        url('../fonts/BogartTrial-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bogart';
+    src: url('../fonts/BogartTrial-Thin.woff2') format('woff2'),
+        url('../fonts/BogartTrial-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bogart';
+    src: url('../fonts/BogartTrial-Semibold.woff2') format('woff2'),
+        url('../fonts/BogartTrial-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Biotif';
+    src: url('../fonts/Biotif-BlackItalic.woff2') format('woff2'),
+        url('../fonts/Biotif-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Biotif';
+    src: url('../fonts/Biotif-Bold.woff2') format('woff2'),
+        url('../fonts/Biotif-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Biotif';
+    src: url('../fonts/Biotif-BoldItalic.woff2') format('woff2'),
+        url('../fonts/Biotif-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Biotif';
+    src: url('../fonts/Biotif-Black.woff2') format('woff2'),
+        url('../fonts/Biotif-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Biotif';
+    src: url('../fonts/Biotif-Book.woff2') format('woff2'),
+        url('../fonts/Biotif-Book.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Biotif';
+    src: url('../fonts/Biotif-ExtraBoldItalic.woff2') format('woff2'),
+        url('../fonts/Biotif-ExtraBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Biotif';
+    src: url('../fonts/Biotif-BookItalic.woff2') format('woff2'),
+        url('../fonts/Biotif-BookItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Biotif';
+    src: url('../fonts/Biotif-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Biotif-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Biotif';
+    src: url('../fonts/Biotif-Light.woff2') format('woff2'),
+        url('../fonts/Biotif-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Biotif';
+    src: url('../fonts/Biotif-RegularItalic.woff2') format('woff2'),
+        url('../fonts/Biotif-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Biotif';
+    src: url('../fonts/Biotif-Medium.woff2') format('woff2'),
+        url('../fonts/Biotif-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Biotif';
+    src: url('../fonts/Biotif-MediumItalic.woff2') format('woff2'),
+        url('../fonts/Biotif-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Biotif';
+    src: url('../fonts/Biotif-Regular.woff2') format('woff2'),
+        url('../fonts/Biotif-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Biotif';
+    src: url('../fonts/Biotif-LightItalic.woff2') format('woff2'),
+        url('../fonts/Biotif-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Biotif';
+    src: url('../fonts/Biotif-SemiBold.woff2') format('woff2'),
+        url('../fonts/Biotif-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Biotif';
+    src: url('../fonts/Biotif-SemiBoldItalic.woff2') format('woff2'),
+        url('../fonts/Biotif-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
 }
