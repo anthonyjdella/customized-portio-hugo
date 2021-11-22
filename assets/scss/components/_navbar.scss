@@ -86,3 +86,24 @@
     opacity: 1;
     color: #2a4eff;
 }
+
+.poke {
+    -webkit-filter: drop-shadow(1px 1px 1px $primary) drop-shadow(-1px -1px -0 $primary);
+    filter:drop-shadow(1px 1px 7px $primary) drop-shadow(-1px -1px 0 $primary);
+    animation: pulsate 1.5s ease-out infinite;
+}
+
+@keyframes pulsate {
+    0%  {
+        -webkit-filter: drop-shadow(1px 1px 1px $secondary) drop-shadow(-1px -1px -0 $primary);
+        filter:drop-shadow(1px 1px 1px $secondary) drop-shadow(-1px -1px 0 $primary);
+    }
+    50% {
+        -webkit-filter: drop-shadow(1px 1px 7px $secondary) drop-shadow(-1px -1px -0 $primary);
+        filter:drop-shadow(1px 1px 7px $secondary) drop-shadow(-1px -1px 0px $primary);
+    }
+    10% {
+        -webkit-filter: drop-shadow(2px 2px 4px $secondary) drop-shadow(-2px -2px 0 $primary);
+        filter:drop-shadow(2px 2px 4px $secondary) drop-shadow(-2px -2px 0 $primary);
+    }
+}

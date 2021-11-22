@@ -55,11 +55,12 @@
           <div class="figure-svg">
             <img src="images/hero/figure-svg.svg" alt="figure-svg" />
           </div>
+          <!-- <a id="area1" class="area" href="#"></a>
+          <a id="area2" class="area" href="#"></a> -->
           <img src="{{ .image | absURL }}" alt="hero-image" style='
                   -webkit-mask: url({{"images/hero/hero-mask-svg.png" | absURL }});
                   -webkit-mask-repeat: no-repeat;
                   -webkit-mask-size: contain;
-                  -webkit-mask-position: center center;
                 ' />
 
           {{ if .videoURL }}
