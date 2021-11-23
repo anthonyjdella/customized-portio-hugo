@@ -72,3 +72,17 @@
     }
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .about {
+    &_content {
+      &-thumb {
+        .about_content-thumb-image {
+          img {
+            width: 75%;
+          }
+        }
+      }
+    }
+  }
+}

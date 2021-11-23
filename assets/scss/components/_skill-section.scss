@@ -93,3 +93,15 @@
     width: 0;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .skill {
+    &__thumb {
+      &_image {
+        img {
+          width: 75%;
+        }
+      }
+    }
+  }
+}
