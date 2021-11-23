@@ -76,7 +76,7 @@ $(document).ready(function () {
         {
           scrollTop: elem.offset().top,
         },
-        1000
+        250
       );
     }
   });
