@@ -107,3 +107,47 @@
         filter:drop-shadow(2px 2px 4px $secondary) drop-shadow(-2px -2px 0 $primary);
     }
 }
+
+$duration: .2s;
+$distance: 80px;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
+.nav-item {
+    position: relative;
+    text-decoration: none;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        height: 4px;
+        background-color: $primary;
+    }
+    &:before {
+        opacity: 0;
+        transform: translateY(- $distance);
+        transition: transform 0s $easeOutBack, opacity 0s;
+    }
+    &:after {
+        opacity: 0;
+        transform: translateY($distance/2);
+        transition: transform $duration $easeOutBack, opacity $duration;
+    }
+    &:hover,
+    &:focus {
+        &:before,
+        &:after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        &:before {
+            transition: transform $duration $easeOutBack, opacity $duration;
+        }
+        &:after {
+            transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+        }
+    }
+}
