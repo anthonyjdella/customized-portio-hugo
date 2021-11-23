@@ -299,6 +299,32 @@
   }
 }
 
+@media screen and (max-width: 416px) and (min-width: 406px) {
+  .hero-top-title {
+    font-size: 2em;
+  }
+  .chinese:hover:before {
+    opacity: 1; transform: translate(-50%,0);
+  }
+}
+
+#resumeRegistry {
+  margin-left: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  #list {
+    // width: 40%;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+  #resumeRegistry {
+    width: 60%;
+    margin-left: 0px;
+  }
+}
+
 // .area {
 //   background:#fff;
 //   display:block;
