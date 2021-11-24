@@ -1,0 +1,269 @@
+// 4k Laptops 2560px
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
+}
+
+// Large Laptops 1440px
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    body {
+        padding-left: 2.5em;
+        padding-right: 2.5em;
+    }
+    .navbar {
+        padding-left: 5em !important;
+        padding-right: 5em !important;
+    }
+    .hero-top-title {
+        font-size: 3.5em !important;
+    }
+    .hero_content {
+        padding: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    .hero-bottom-title {
+        font-size: .65em !important;
+    }
+    .btn-zoom {
+        margin-bottom: 2em;
+    }
+    #resumeRegistry {
+        margin-left: 0px !important;
+    }
+    #purple-cursor {
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+    .hero_figure {
+        width: 100% !important;
+    }
+}
+
+// Regular Laptops 1024px
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .hero {
+        padding-bottom: 175px !important;
+    }
+    .hero-top-title {
+        font-size: 2.5em !important;
+    }
+    .hero_content {
+        padding: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    .hero-bottom-title {
+        font-size: .65em !important;
+    }
+    .hero_footer-svg {
+        bottom: -175px !important;
+    }
+    .btn-zoom {
+        margin-bottom: 2em;
+    }
+    #resumeRegistry {
+        margin-left: 0px !important;
+    }
+    #purple-cursor {
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+    .hero_figure-popup {
+        left: -100px !important;
+        bottom: -250px !important;
+    }
+    .hero_figure {
+        width: 100% !important;
+    }
+    .nav-item {
+        padding: 0 5px !important;
+    }
+}
+
+// Tablet 768px
+@media screen and (min-width: 425px) and (max-width: 768px) {
+    .hero-top-title {
+        font-size: 3.25em !important;
+    }
+    .hero_content {
+        padding: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    .hero-bottom-title {
+        font-size: .75em !important;
+    }
+    .btn-zoom {
+        width: 100% !important;
+        margin-bottom: 2em;
+    }
+    #resumeRegistry {
+        margin-left: 0px !important;
+    }
+    #purple-cursor {
+        margin-right: 0px;
+    }
+    .waving:hover:before {
+        transform: translate(-75%, 0) !important;
+    }
+    .chinese:hover:before {
+        transform: translate(-50%, 0) !important;
+    }
+    .hero_figure-popup {
+        left: 500px !important;
+        bottom: -150px !important;
+    }
+}
+
+// Large Mobile 425px
+@media screen and (min-width: 375px) and (max-width: 425px) {
+    .hero-top-title {
+        font-size: 1.9em !important;
+    }
+    .hero_content {
+        padding: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    .hero-bottom-title {
+        font-size: .5em !important;
+    }
+    .btn-zoom {
+        width: 100% !important;
+        margin-bottom: 2em;
+    }
+    #resumeRegistry {
+        margin-left: 0px !important;
+    }
+    #purple-cursor {
+        margin-right: 0px;
+    }
+    .waving:hover:before {
+        transform: translate(-75%, 0) !important;
+    }
+    .chinese:hover:before {
+        transform: translate(-50%, 0) !important;
+    }
+    .hero_figure-popup {
+        transform: scale(0.7) !important;
+        left: 0px !important;
+        bottom: -100px !important;
+    }
+}
+
+// Medium Mobile 375px
+@media screen and (min-width: 320px) and (max-width: 375px) {
+    .hero-top-title {
+        font-size: 1.7em !important;
+    }
+    .hero_content {
+        padding: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    .hero-bottom-title {
+        font-size: .5em !important;
+    }
+    .btn-zoom {
+        width: 100% !important;
+        margin-bottom: 2em;
+    }
+    #resumeRegistry {
+        margin-left: 0px !important;
+    }
+    #purple-cursor {
+        margin-right: 0px;
+    }
+    .waving:hover:before {
+        transform: translate(-75%, 0) !important;
+    }
+    .chinese:hover:before {
+        transform: translate(-50%, 0) !important;
+    }
+    .hero_figure-popup {
+        transform: scale(0.7) !important;
+        left: 0px !important;
+        bottom: -100px !important;
+    }
+}
+
+// Small Mobile 320px
+@media screen and (max-width: 320px) {
+    .hero-top-title {
+        font-size: 1.4em !important;
+    }
+    .hero_content {
+        padding: 0px !important;
+        margin-bottom: 0px !important;
+    }
+    .hero-bottom-title {
+        font-size: .5em !important;
+    }
+    .btn-zoom {
+        width: 100% !important;
+        margin-bottom: 2em;
+    }
+    #resumeRegistry {
+        margin-left: 0px !important;
+    }
+    #purple-cursor {
+        margin-right: 0px;
+    }
+    .waving:hover:before {
+        transform: translate(-75%, 0) !important;
+    }
+    .chinese:hover:before {
+        transform: translate(-50%, 0) !important;
+    }
+    .hero_figure-popup {
+        transform: scale(0.7) !important;
+        left: 0px !important;
+        bottom: -100px !important;
+    }
+}
+
+
+// @media screen and (max-width: 463px) {
+//     .hero-top-title {
+//         font-size: 2.5em;
+//     }
+
+//     .hero-bottom-title {
+//         font-size: .5em;
+//     }
+
+//     .waving:hover:before {
+//         opacity: 1;
+//         transform: translate(-75%, 0);
+//     }
+
+//     .chinese:hover:before {
+//         opacity: 1;
+//         transform: translate(-50%, 0);
+//     }
+
+//     .hero_figure-popup {
+//         transform: scale(0.7);
+//         left: 0px;
+//         bottom: -100px;
+//     }
+// }
+
+// @media screen and (max-width: 416px) and (min-width: 406px) {
+//     .hero-top-title {
+//         font-size: 2em;
+//     }
+
+//     .chinese:hover:before {
+//         opacity: 1;
+//         transform: translate(-50%, 0);
+//     }
+// }
+
+// @media screen and (max-width: 767px) {
+//     #list {
+//         // width: 40%;
+//         margin-left: 15px;
+//         margin-right: 15px;
+//         margin-bottom: 10px;
+//     }
+
+//     #resumeRegistry {
+//         width: 60%;
+//         margin-left: 0px;
+//     }
+// }
