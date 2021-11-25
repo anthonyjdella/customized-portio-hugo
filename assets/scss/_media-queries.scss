@@ -104,11 +104,17 @@
     }
     .chinese:hover:before {
         transform: translate(-50%, 0) !important;
-        font-size: .47em !important;
+        font-size: .7em !important;
     }
     .hero_figure-popup {
         left: 500px !important;
         bottom: -150px !important;
+    }
+    :root {
+        --microtip-font-size: .45em;
+    }
+    [role~=tooltip][data-microtip-position|=top]::after {
+        z-index: 2147483647 !important;
     }
 }
 
@@ -139,7 +145,7 @@
     }
     .chinese:hover:before {
         transform: translate(-50%, 0) !important;
-        font-size: .48em !important;
+        font-size: .7em !important;
     }
     .hero_figure-popup {
         transform: scale(0.7) !important;
@@ -148,6 +154,12 @@
     }
     #signature {
         font-size: 3em !important;
+    }
+    :root {
+        --microtip-font-size: .45em;
+    }
+    [role~=tooltip][data-microtip-position|=top]::after {
+        z-index: 2147483647 !important;
     }
 }
 
@@ -178,12 +190,18 @@
     }
     .chinese:hover:before {
         transform: translate(-50%, 0) !important;
-        font-size: .45em !important;
+        font-size: .7em !important;
     }
     .hero_figure-popup {
         transform: scale(0.7) !important;
         left: 0px !important;
         bottom: -100px !important;
+    }
+    :root {
+        --microtip-font-size: .475em;
+    }
+    [role~=tooltip][data-microtip-position|=top]::after {
+        z-index: 2147483647 !important;
     }
 }
 
@@ -214,6 +232,7 @@
     }
     .chinese:hover:before {
         transform: translate(-50%, 0) !important;
+        font-size: .7em !important;
     }
     .hero_figure-popup {
         transform: scale(0.7) !important;
@@ -222,6 +241,12 @@
     }
     #signature {
         font-size: 2em !important;
+    }
+    :root {
+        --microtip-font-size: .5em;
+    }
+    [role~=tooltip][data-microtip-position|=top]::after {
+        z-index: 2147483647 !important;
     }
 }
 
