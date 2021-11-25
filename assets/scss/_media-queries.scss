@@ -104,6 +104,7 @@
     }
     .chinese:hover:before {
         transform: translate(-50%, 0) !important;
+        font-size: .47em !important;
     }
     .hero_figure-popup {
         left: 500px !important;
@@ -138,11 +139,15 @@
     }
     .chinese:hover:before {
         transform: translate(-50%, 0) !important;
+        font-size: .48em !important;
     }
     .hero_figure-popup {
         transform: scale(0.7) !important;
         left: 0px !important;
         bottom: -100px !important;
+    }
+    #signature {
+        font-size: 3em !important;
     }
 }
 
@@ -173,6 +178,7 @@
     }
     .chinese:hover:before {
         transform: translate(-50%, 0) !important;
+        font-size: .45em !important;
     }
     .hero_figure-popup {
         transform: scale(0.7) !important;
@@ -213,6 +219,9 @@
         transform: scale(0.7) !important;
         left: 0px !important;
         bottom: -100px !important;
+    }
+    #signature {
+        font-size: 2em !important;
     }
 }
 

@@ -208,6 +208,7 @@
 
 .chinese:hover:before {
   opacity: 1; transform: translate(0,0);
+  font-size: .5em;
 }
 
 .chinese:before {
@@ -360,5 +361,40 @@
   }
   100% {
     transform: translateY(0%);
+  }
+}
+
+.glitch-effect {
+  animation: shift 5s infinite;
+}
+
+@keyframes shift{
+  0%, 40%, 44%, 58%, 61%, 65%, 69%, 73%, 100% {
+    transform: skewX(0deg);
+  }
+  41% {
+    transform: skewX(10deg);
+  }
+  42% {
+    transform: skewX(-10deg);
+  }
+  63% {
+    transform: skewX(10deg) skewY(-5deg);
+  }
+}
+
+.glitch-effect-2 {
+  animation: glitch 5s infinite;
+}
+
+@keyframes glitch{
+  0%, 80%, 84% {
+    transform: skewX(0deg);
+  }
+  81% {
+    transform: skewX(10deg);
+  }
+  82% {
+    transform: skewX(-10deg);
   }
 }
