@@ -27,8 +27,7 @@
 						<h2 class="mb-0">Let’s Talk Business <br> (or Tech)</h2>
 					</div>
 					<div class="footer__cta_action">
-						<a class="btn btn-light btn-zoom" id="purple-cursor" href="{{ .Site.Params.contactLink | absURL }}">Get in
-							touch</a>
+						<a class="btn btn-light btn-zoom" id="purple-cursor" href="{{ .Site.Params.contactLink | absURL }}">Hire Me</a>
 					</div>
 				</div>
 			</div>
@@ -111,3 +110,5 @@
 <script src="{{ $formhandler.Permalink }}"></script>
 {{ $script := resources.Get "js/script.js" | minify }}
 <script src="{{ $script.Permalink }}"></script>
+{{ $meny := resources.Get "js/meny.js" | minify }}
+<script src="{{ $meny.Permalink }}"></script>

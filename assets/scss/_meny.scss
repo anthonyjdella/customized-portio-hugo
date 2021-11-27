@@ -1,0 +1,125 @@
+.contents {
+    background: white;
+    // padding: 20px 40px;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform-style: preserve-3d;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.meny {
+    display: none;
+    padding: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #333;
+    color: #eee;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.meny ul {
+    margin-top: 10px;
+}
+
+.meny ul li {
+    display: inline-block;
+    width: 200px;
+    list-style: none;
+    font-size: 18px;
+    padding: 3px 10px;
+}
+
+.meny ul li:before {
+    content: '-';
+    margin-right: 5px;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.meny ul li a:hover {
+	color: #f76f76;
+}
+
+/**
+ * Hint graphic that appears while menu is inactive
+ */
+.meny-arrow {
+    position: absolute;
+    z-index: 10;
+
+    border: 20px solid transparent;
+
+    -webkit-transition: opacity 0.4s ease 0.4s;
+    -moz-transition: opacity 0.4s ease 0.4s;
+    -ms-transition: opacity 0.4s ease 0.4s;
+    -o-transition: opacity 0.4s ease 0.4s;
+    transition: opacity 0.4s ease 0.4s;
+}
+
+.meny-left .meny-arrow {
+    left: 14px;
+    top: 50%;
+    margin-top: -16px;
+    border-left: 26px solid $primary;
+    animation: bounce 2s infinite;
+}
+
+.meny-right .meny-arrow {
+    right: 14px;
+    top: 50%;
+    margin-top: -16px;
+    border-right: 16px solid #333;
+}
+
+.meny-top .meny-arrow {
+    left: 50%;
+    top: 14px;
+    margin-left: -16px;
+    border-top: 16px solid #333;
+}
+
+.meny-bottom .meny-arrow {
+    left: 50%;
+    bottom: 14px;
+    margin-left: -16px;
+    border-bottom: 16px solid #333;
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    40% {
+        -ms-transform: translateX(30px);
+        transform: translateX(30px);
+    }
+
+    60% {
+        -ms-transform: translateX(15px);
+        transform: translateX(15px);
+    }
+}
+
+.meny-active .meny-arrow {
+    opacity: 0;
+
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+    -ms-transition: opacity 0.2s ease;
+    -o-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+}

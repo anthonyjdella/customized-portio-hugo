@@ -4,10 +4,10 @@
 
 // Large Laptops 1440px
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
-    body {
-        padding-left: 2.5em;
-        padding-right: 2.5em;
-    }
+    // body {
+    //     padding-left: 2.5em;
+    //     padding-right: 2.5em;
+    // }
     .navbar {
         padding-left: 5em !important;
         padding-right: 5em !important;
@@ -34,6 +34,9 @@
     }
     .hero_figure {
         width: 100% !important;
+    }
+    .contents {
+        overflow-x: hidden !important;
     }
 }
 
@@ -116,6 +119,15 @@
     [role~=tooltip][data-microtip-position|=top]::after {
         z-index: 2147483647 !important;
     }
+    .contents {
+        overflow-x: hidden !important;
+    }
+    .meny-arrow {
+        border: 20px solid transparent !important;
+    }
+    .meny-left .meny-arrow {
+        border-left: 26px solid #2a4eff !important;
+    }
 }
 
 // Large Mobile 425px
@@ -161,6 +173,15 @@
     [role~=tooltip][data-microtip-position|=top]::after {
         z-index: 2147483647 !important;
     }
+    .contents {
+        overflow-x: hidden !important;
+    }
+    .meny-arrow {
+        border: 20px solid transparent !important;
+    }
+    .meny-left .meny-arrow {
+        border-left: 26px solid #2a4eff !important;
+    }
 }
 
 // Medium Mobile 375px
@@ -203,6 +224,15 @@
     [role~=tooltip][data-microtip-position|=top]::after {
         z-index: 2147483647 !important;
     }
+    .contents {
+        overflow-x: hidden !important;
+    }
+    .meny-arrow {
+        border: 20px solid transparent !important;
+    }
+    .meny-left .meny-arrow {
+        border-left: 26px solid #2a4eff !important;
+    }
 }
 
 // Small Mobile 320px
@@ -236,7 +266,7 @@
     }
     .hero_figure-popup {
         transform: scale(0.7) !important;
-        left: 0px !important;
+        left: -50px !important;
         bottom: -100px !important;
     }
     #signature {
@@ -247,6 +277,18 @@
     }
     [role~=tooltip][data-microtip-position|=top]::after {
         z-index: 2147483647 !important;
+    }
+    .navbar {
+        padding: 15px 0px !important;
+    }
+    .contents {
+        overflow-x: hidden !important;
+    }
+    .meny-arrow {
+        border: 10px solid transparent !important;
+    }
+    .meny-left .meny-arrow {
+        border-left: 16px solid #2a4eff !important;
     }
 }
 
