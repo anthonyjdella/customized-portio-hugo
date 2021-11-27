@@ -78,3 +78,19 @@
     }
   }
 }
+
+.portfolio {
+  padding-bottom: 0px;
+}
+
+.portfolio-item-content .see-more-btn {
+  display: inline;
+}
+
+.blog-page__item-content span::before {
+  background: 0 !important;
+}
+
+.blog-page__item-content span {
+  color: inherit !important;
+}

@@ -1,0 +1,56 @@
+<section class="footer" id="contact">
+	<div class="footer__background_shape">
+		<svg viewBox="0 0 1920 79">
+			<path d="M0 0h1920v79L0 0z" data-name="Path 1450" />
+		</svg>
+	</div>
+	<div class="container">
+		<div class="row footer__widget">
+			<div class="col-lg-12" id="signature">
+				Anthony Dellavecchia
+			</div>
+		</div>
+		<div class="row footer__footer">
+			<div class="col-lg-7">
+				<div class="footer__footer_copy text-light">
+					<p>
+						<script>
+							document.write("© " + new Date().getFullYear());
+						</script>
+						{{ .Site.Params.copyright }}
+					</p>
+					<script>
+						const year = () => {return new Date()};
+                    </script>
+				</div>
+			</div>
+			<div class="col-lg-5">
+				<div class="footer__footer_social">
+					<ul class="unstyle-list">
+						{{ $social := .Site.Params.social }}
+						{{ range $social }}
+						<li class="d-inline-block mx-2"><a class="text-light" target="_blank" id="purple-cursor" href="{{ .url }}"><i
+									class="fa {{ .icon }}"></i></a>
+						</li>
+						{{ end }}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ .Site.Params.map.APIkey }}&libraries=geometry"></script>
+<script src="{{ "plugins/jQuery/jquery.min.js" | absURL }}"></script>
+<script src="{{ "plugins/bootstrap/bootstrap.min.js" | absURL }}"></script>
+<script src="{{ "plugins/slick/slick.min.js" | absURL }}"></script>
+<script src="{{ "plugins/waypoint/jquery.waypoints.min.js" | absURL }}"></script>
+<script src="{{ "plugins/magnafic-popup/jquery.magnific-popup.min.js" | absURL }}"></script>
+<script src="{{ "plugins/tweenmax/TweenMax.min.js" | absURL }}"></script>
+<script src="{{ "plugins/imagesloaded/imagesloaded.min.js" | absURL }}"></script>
+<script src="{{ "plugins/masonry/masonry.min.js" | absURL }}"></script>
+{{ $formhandler := resources.Get "js/form-handler.js" | minify }}
+<script src="{{ $formhandler.Permalink }}"></script>
+{{ $script := resources.Get "js/script.js" | minify }}
+<script src="{{ $script.Permalink }}"></script>
+{{ $meny := resources.Get "js/meny.js" | minify }}
+<script src="{{ $meny.Permalink }}"></script>

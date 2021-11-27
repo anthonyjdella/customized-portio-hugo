@@ -1,6 +1,7 @@
 .blog-preview {
 	position: relative;
 	margin-bottom: 30px;
+	padding-bottom: 200px;
 	&__shape {
 		position: absolute;
 		top: 11%;
@@ -106,4 +107,8 @@
 	to {
 		-webkit-transform: rotate(360deg);
 	}
+}
+
+.blog-preview {
+	background: #f1f6f9;
 }

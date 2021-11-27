@@ -27,8 +27,8 @@
         <h3 class="breadCrumb__title">{{ .Title }}</h3>
         <nav aria-label="breadcrumb" class="d-flex justify-content-center">
           <ol class="breadcrumb align-items-center">
-            <li class="breadcrumb-item"><a href="{{ .Site.BaseURL }}">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{{ .Params.breadcrumb }}</li>
+            <!-- <li class="breadcrumb-item"><a href="{{ .Site.BaseURL }}">Home</a></li> -->
+            <li class="breadcrumb-item active" aria-current="page">Contact Me</li>
           </ol>
         </nav>
       </div>
@@ -40,7 +40,7 @@
 <section class="section contact__info">
   <div class="container">
     <div class="row">
-      <div class="col-lg-3">
+      <div class="col-lg-4">
         <div class="contact__info_item">
           <div class="contact__info_item-icon">
             <div class="icon-background">
@@ -60,7 +60,8 @@
           </p>
         </div>
       </div>
-      <div class="col-lg-6">
+
+      <div class="col-lg-4">
         <div class="contact__info_item">
           <div class="contact__info_item-icon">
             <div class="icon-background">
@@ -75,13 +76,16 @@
             </div>
           </div>
           <h4>Phone & Email</h4>
-          <p><a href="tel:{{ $address.phone }}">{{ $address.phone }}</a><br>
-            <a href="mailto:{{ $address.email }}">{{ $address.email }}</a>
+          <p style="display: inline-flex;">
+            <a id="purple-cursor" href="sms:9402421288;?&body=Hey%20Anthony%20I%20am%20interested%20in%20hiring%20you.%20Please%20contact%20me." target="_blank">Text </a>&nbsp;,&nbsp;
+            <a id="purple-cursor" href="tel:{{ $address.phone }}" target="_blank">Call </a>&nbsp;,&nbsp;
+            or&nbsp;,&nbsp;
+            <a id="purple-cursor" href="mailto:{{ $address.email }}" target="_blank">Email Me</a>
           </p>
 
         </div>
       </div>
-      <div class="col-lg-3">
+      <div class="col-lg-4">
         <div class="contact__info_item">
           <div class="contact__info_item-icon">
             <div class="icon-background">
@@ -130,11 +134,10 @@
             </div>
 
             <div class="form-group">
-              <div class="form-check small">
-                <input type="checkbox" class="form-check-input" name="agreement" id="aggrement" required />
+              <div class="form-check small" style="padding-left: 0 !important;">
+                <!-- <input type="checkbox" class="form-check-input" name="agreement" id="aggrement" required /> -->
                 <label class="form-check-label" for="aggrement">
-                  I agree that my submitted data is being collected and
-                  stored.</label>
+                  Filling this out will send me an email.</label>
               </div>
             </div>
 
@@ -186,5 +189,7 @@
     </div>
   </div>
 </section>
+
+{{ partial "footerWithoutContact.html" . }}
 
 {{ end }}
