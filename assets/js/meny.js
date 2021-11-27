@@ -226,6 +226,9 @@ var Meny = {
 				dom.cover.style.zIndex = 1000;
 				dom.cover.style.visibility = 'hidden';
 				dom.cover.style.opacity = 0;
+				dom.cover.style.color = '#5d78ff';
+				dom.cover.style.border = '1rem ridge #5d78ff';
+				// dom.cover.setAttribute("style", "font-size: 5rem;");
 
 				// Silence unimportant errors in IE8
 				try {
@@ -233,6 +236,7 @@ var Meny = {
 					dom.cover.style.background = '-ms-linear-gradient('+ config.position +','+ config.gradient;
 					dom.cover.style.background = '-moz-linear-gradient('+ config.position +','+ config.gradient;
 					dom.cover.style.background = '-webkit-linear-gradient('+ config.position +','+ config.gradient;
+					// dom.cover.innerHTML += "Click back to Exit";
 				}
 				catch( e ) {}
 
