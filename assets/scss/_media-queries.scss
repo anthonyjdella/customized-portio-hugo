@@ -78,6 +78,9 @@
     .nav-item {
         padding: 0 5px !important;
     }
+    .resume__education_item {
+        padding-right: 100px !important;
+    }
 }
 
 // Tablet 768px
@@ -128,12 +131,18 @@
     .meny-left .meny-arrow {
         border-left: 26px solid #2a4eff !important;
     }
+    .portfolio-item:nth-child(4n-3) {
+        padding-right: 0px !important;
+    }
+    .portfolio-item {
+        width: 100% !important;
+    }
 }
 
 // Large Mobile 425px
 @media screen and (min-width: 375px) and (max-width: 425px) {
     .hero-top-title {
-        font-size: 1.9em !important;
+        font-size: 1.8em !important;
     }
     .hero_content {
         padding: 0px !important;
@@ -165,7 +174,7 @@
         bottom: -100px !important;
     }
     #signature {
-        font-size: 3em !important;
+        font-size: 1.5em !important;
     }
     :root {
         --microtip-font-size: .45em;
@@ -182,12 +191,15 @@
     .meny-left .meny-arrow {
         border-left: 26px solid #2a4eff !important;
     }
+    .resume__education_item {
+        padding-right: 90px !important;
+    }
 }
 
 // Medium Mobile 375px
 @media screen and (min-width: 320px) and (max-width: 375px) {
     .hero-top-title {
-        font-size: 1.7em !important;
+        font-size: 1.6em !important;
     }
     .hero_content {
         padding: 0px !important;
@@ -217,6 +229,9 @@
         transform: scale(0.7) !important;
         left: 0px !important;
         bottom: -100px !important;
+    }
+    #signature {
+        font-size: 1em !important;
     }
     :root {
         --microtip-font-size: .475em;
@@ -238,7 +253,7 @@
 // Small Mobile 320px
 @media screen and (max-width: 320px) {
     .hero-top-title {
-        font-size: 1.4em !important;
+        font-size: 1.3em !important;
     }
     .hero_content {
         padding: 0px !important;
@@ -256,6 +271,7 @@
     }
     #purple-cursor {
         margin-right: 0px;
+        padding-left: 10px;
     }
     .waving:hover:before {
         transform: translate(-75%, 0) !important;
@@ -270,7 +286,7 @@
         bottom: -100px !important;
     }
     #signature {
-        font-size: 2em !important;
+        font-size: 1em !important;
     }
     :root {
         --microtip-font-size: .5em;
@@ -289,6 +305,12 @@
     }
     .meny-left .meny-arrow {
         border-left: 16px solid #2a4eff !important;
+    }
+    h2 {
+        font-size: 2.75rem;
+    }
+    h4 {
+        font-size: 1.5rem;
     }
 }
 
