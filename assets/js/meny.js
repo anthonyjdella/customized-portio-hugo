@@ -486,7 +486,11 @@ var Meny = {
 							break;
 
 						case POSITION_L:
-							if( x > config.width ) {
+							// only close meny when you click on the conent of my site.
+							var placeToClick = document.getElementById('content');
+							if( x-100 > config.width && placeToClick.addEventListener('click', function () {
+								close();
+							}, false)) {
 								close();
 							}
 							else if( x < config.threshold ) {
