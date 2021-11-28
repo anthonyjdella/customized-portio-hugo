@@ -58,8 +58,8 @@ $(document).ready(function () {
   PageLoad();
 
   // change-navigation-color
-  $(window).scroll(function () {
-    if ($(document).scrollTop() > 200) {
+  $('.contents').scroll(function () {
+    if ($('.contents').scrollTop() > 200) {
       $(".navbar").addClass("nav__color__change");
     } else {
       $(".navbar").removeClass("nav__color__change");
@@ -90,7 +90,7 @@ $(document).ready(function () {
     infinite: false,
     slidesToShow: 3,
     slidesToScroll: 1,
-    dots: false,
+    dots: true,
     arrows: false,
     responsive: [
       {
@@ -112,38 +112,47 @@ $(document).ready(function () {
     ],
   });
 
-  // skill count
-  $(".skill__progress").waypoint(
-    function () {
-      $(".progress-value span").each(function () {
-        $(this)
-          .prop("Counter", 0)
-          .animate(
-            {
-              Counter: $(this).text(),
-            },
-            {
-              duration: 3000,
-              easing: "swing",
-              step: function (now) {
-                $(this).text(Math.ceil(now));
-              },
-            }
-          );
-      });
+  // skill animation progress bar
+  // $(".skill__progress").waypoint(
+  //   function () {
+  //     $(".progress-value span").each(function () {
+  //       $(this)
+  //         .prop("Counter", 0)
+  //         .animate(
+  //           {
+  //             Counter: $(this).text(),
+  //           },
+  //           {
+  //             duration: 3000,
+  //             easing: "swing",
+  //             step: function (now) {
+  //               $(this).text(Math.ceil(now));
+  //             },
+  //           }
+  //         );
+  //     });
+  //     $(".skill__progress_item").addClass("js-animation");
+  //     this.destroy();
+  //   },
+  //   { offset: "80%" }
+  // );
+
+  // skill animation progress bar
+  $('.contents').scroll(function(){
+    pos = $('.contents').scrollTop();
+    console.log(pos)
+    if ( pos > $(".skill__progress_item").offset().top){
       $(".skill__progress_item").addClass("js-animation");
-      this.destroy();
-    },
-    { offset: "80%" }
-  );
+    }
+  });
 
   // Testimonial slider
   $(".testimonial__slider").slick({
-    infinite: true,
+    infinite: false,
     slidesToShow: 2,
     slidesToScroll: 1,
     dots: true,
-    arrows: false,
+    arrows: true,
     autoplay: true,
     autoplaySpeed: 2000,
     responsive: [
@@ -407,9 +416,9 @@ function initialize() {
     panControl: false,
     scrollwheel: false,
     zoomControl: true,
-    mapTypeControl: false,
+    mapTypeControl: true,
     scaleControl: false,
-    streetViewControl: false,
+    streetViewControl: true,
     overviewMapControl: false,
     zoomControlOptions: {
       style: google.maps.ZoomControlStyle.LARGE,
