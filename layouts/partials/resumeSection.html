@@ -38,6 +38,11 @@
                             <span class="pre-line text-primary"> {{ .time }} </span>
                             <img class="werk" src="{{ .image | absURL }}" alt="skill-img">
                             {{ .content | markdownify }}
+                            <br>
+                            <ul style="font-size: .85em;">
+                                <li>{{ .grade | markdownify }}</li>
+                                <!-- <li>Dean's List for Top 10% of Students</li> -->
+                            </ul>
                         </div>
                         {{ end }}
                     </div>
