@@ -3,9 +3,10 @@
 {{ partial "head.html" . }}
 
 <body id="purple-cursor-2">
+    {{ partial "navbar.html" . }}
     {{ partial "meny.html"}}
   <div class="contents" id="content">
-    {{ partial "navbar.html" . }}
+    <!-- {{ partial "navbar.html" . }} -->
     {{ block "main" . }}{{ end }}
   </div>
   <script>

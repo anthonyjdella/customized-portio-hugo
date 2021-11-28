@@ -494,11 +494,14 @@ var Meny = {
 							var placeToClick = document.getElementById('content');
 							if( x-100 > config.width && placeToClick.addEventListener('click', function () {
 								close();
+								document.getElementById('hideNavBar').style.display = "block";
 							}, false)) {
-								close();
+								close();;
+								document.getElementById('hideNavBar').style.display = "block";
 							}
 							else if( x < config.threshold ) {
 								open();
+								document.getElementById('hideNavBar').style.display = "none";
 							}
 							break;
 					}
