@@ -1,0 +1,102 @@
+// Dark based on Twitter Dark Mode: https://blog.karenying.com/posts/50-shades-of-dark-mode-gray
+$darkest: #15202B;
+$darker: #192734;
+$dark: #22303C;
+$white: #FFFFFF;
+
+.dark-mode {
+    background-color: $darkest;
+    color: $white;
+    &::-webkit-scrollbar-track {
+        background: $darker;
+    }
+    &.navbar {
+        &.nav__color__change {
+            background: $dark;
+        }
+    }
+    .hero {
+        &_content {
+            span {
+                color: $white !important;
+            }
+            p {
+                color: $white !important;
+            }
+        }
+    }
+    .hero-top-title {
+        color: $white;
+    }
+    .blog-preview{
+        background: $dark;
+    }
+    .top-title {
+        color: $white;
+    }
+    h1,h2,h3,h4,h5 {
+        color: $white;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dark-mobile-menu {
+        &.navbar {
+            background: $dark !important;
+        }
+    }
+}
+
+.herobg-dark-mode {
+    filter: brightness(0) saturate(100%) invert(14%) sepia(11%) saturate(1695%) hue-rotate(168deg) brightness(94%) contrast(98%);
+}
+
+.heroblob-filter-color {
+    filter: brightness(0) saturate(100%) invert(15%) sepia(43%) saturate(365%) hue-rotate(165deg) brightness(99%) contrast(96%) !important;
+}
+
+.blogblob-filter-color {
+    filter: brightness(0) saturate(100%) invert(7%) sepia(8%) saturate(4086%) hue-rotate(169deg) brightness(97%) contrast(89%) !important;
+}
+
+.breadcrumb{
+    &.aboutblob-filter-color {
+    filter: brightness(0) saturate(100%) invert(15%) sepia(43%) saturate(365%) hue-rotate(165deg) brightness(99%) contrast(96%) !important;
+    }
+}
+
+.aboutblob-filter-color {
+    filter: brightness(0) saturate(100%) invert(15%) sepia(43%) saturate(365%) hue-rotate(165deg) brightness(99%) contrast(96%) !important;
+}
+
+.dark-resume-text {
+    color: $white !important;
+    background-color: $dark !important;
+    h4 {
+        color: $white !important;
+    }
+}
+
+.servicebg-dark-mode {
+    filter: brightness(0) saturate(100%) invert(14%) sepia(11%) saturate(1695%) hue-rotate(168deg) brightness(94%) contrast(98%);
+}
+
+.white-text {
+    color: $white !important;
+}
+
+.dark-bg {
+    background-color: $dark !important;
+}
+
+.darker-bg {
+    background-color: $darker !important;
+}
+
+.darkest-bg {
+    background-color: $darkest !important;
+}
+
+.darkest-fill {
+    fill: $darkest !important;
+}

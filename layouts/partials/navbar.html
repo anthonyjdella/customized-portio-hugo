@@ -21,9 +21,21 @@
         </li>
         {{ end }}
       </ul>
-      <div class="navbar-nav">
-        <a id="purple-cursor" href="{{ "contact" | absURL }}" class="btn btn-primary btn-zoom hire_button">Contact</a>
-      </div>
+      <style id="i-hate-this"></style>
+      <div id="mobile-dark-toggle" style="vertical-align: middle;">
+      <label id="purple-cursor" style="margin-bottom: 0px !important; vertical-align: middle;">
+        <input class='toggle-checkbox' type='checkbox' onclick="darkToggleButton();"></input>
+        <div class='toggle-slot'>
+          <div class='sun-icon-wrapper'>
+            <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+          </div>
+          <div class='toggle-button'></div>
+          <div class='moon-icon-wrapper'>
+            <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+          </div>
+        </div>
+      </label>
+    </div>
     </div>
   </div>
 </nav>

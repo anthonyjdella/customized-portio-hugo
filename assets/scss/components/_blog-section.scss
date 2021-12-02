@@ -8,6 +8,7 @@
 		right: 12%;
 		height: 300px;
 		width: 300px;
+		filter: brightness(0) saturate(100%) invert(99%) sepia(6%) saturate(159%) hue-rotate(259deg) brightness(116%) contrast(100%);
 		img {
 			animation: rotate 25s infinite linear;
 			height: 100%;

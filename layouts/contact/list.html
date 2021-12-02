@@ -203,6 +203,18 @@
   </div>
 </section>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function(event) {
+  console.log('contact count: ' + parseInt(localStorage.getItem("toggleCount")))
+
+  if (parseInt(localStorage.getItem("toggleCount")) % 2 == 1) {
+    darkToggleButtonNoIncrement();
+  }
+  else {
+    darkToggleButtonNoIncrement();
+      }
+  });
+</script>
 {{ partial "footerWithoutContact.html" . }}
 
 {{ end }}

@@ -137,6 +137,13 @@
     .portfolio-item {
         width: 100% !important;
     }
+    ::-webkit-scrollbar {
+        width: .5em;
+    }
+    #mobile-dark-toggle {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 // Large Mobile 425px
@@ -194,6 +201,13 @@
     .resume__education_item {
         padding-right: 90px !important;
     }
+    ::-webkit-scrollbar {
+        width: .5em;
+    }
+    #mobile-dark-toggle {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 // Medium Mobile 375px
@@ -247,6 +261,13 @@
     }
     .meny-left .meny-arrow {
         border-left: 26px solid #2a4eff !important;
+    }
+    ::-webkit-scrollbar {
+        width: .5em;
+    }
+    #mobile-dark-toggle {
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -311,6 +332,13 @@
     }
     h4 {
         font-size: 1.5rem;
+    }
+    ::-webkit-scrollbar {
+        width: .5em;
+    }
+    #mobile-dark-toggle {
+        display: flex;
+        justify-content: center;
     }
 }
 

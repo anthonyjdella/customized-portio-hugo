@@ -2,57 +2,70 @@
     padding: 40px 0;
     background: transparent;
     transition: all 0.3s ease;
+
     @include desktop {
         background: $white;
     }
+
     @include desktop {
         padding: 15px 20px;
         margin: 10px 10px 0;
         border-radius: 5px;
     }
+
     &.nav__color__change {
         background: $white;
         padding: 20px 0;
         box-shadow: 0px 10px 20px 0px rgba(50, 65, 141, 0.1);
+
         @include desktop {
             padding: 15px 20px;
         }
     }
+
     @include desktop {
         .navbar-toggler {
             outline: 0;
             padding: 0;
+
             &-icon {
                 height: 2px;
                 width: 25px;
                 transition: all 0.2s;
                 background: $primary;
                 display: block;
+
                 &:not(:last-child) {
                     margin-bottom: 5px;
                 }
+
                 &:nth-child(1) {
                     transform: rotate(45deg);
                     transform-origin: 10% 10%;
                 }
+
                 &:nth-child(2) {
                     opacity: 0;
                     filter: alpha(opacity=0);
                 }
+
                 &:nth-child(3) {
                     transform: rotate(-45deg);
                     transform-origin: 10% 90%;
                 }
             }
+
             &.collapsed {
                 .navbar-toggler-icon {
                     &:nth-child(1) {
                         transform: rotate(0);
                     }
+
                     &:nth-child(2) {
                         opacity: 1;
                         filter: alpha(opacity=1);
                     }
+
                     &:nth-child(3) {
                         transform: rotate(0);
                     }
@@ -78,33 +91,35 @@
     bottom: .6em;
 }
 
-.poke:hover + .bubble {
+.poke:hover+.bubble {
     opacity: 1;
 }
 
-.poke:hover + .bubble + .hello-there {
+.poke:hover+.bubble+.hello-there {
     opacity: 1;
     color: #2a4eff;
 }
 
 .poke {
     -webkit-filter: drop-shadow(1px 1px 1px $primary) drop-shadow(-1px -1px -0 $primary);
-    filter:drop-shadow(1px 1px 7px $primary) drop-shadow(-1px -1px 0 $primary);
+    filter: drop-shadow(1px 1px 7px $primary) drop-shadow(-1px -1px 0 $primary);
     animation: pulsate 1.5s ease-out infinite;
 }
 
 @keyframes pulsate {
-    0%  {
+    0% {
         -webkit-filter: drop-shadow(1px 1px 1px $secondary) drop-shadow(-1px -1px -0 $primary);
-        filter:drop-shadow(1px 1px 1px $secondary) drop-shadow(-1px -1px 0 $primary);
+        filter: drop-shadow(1px 1px 1px $secondary) drop-shadow(-1px -1px 0 $primary);
     }
+
     50% {
         -webkit-filter: drop-shadow(1px 1px 7px $secondary) drop-shadow(-1px -1px -0 $primary);
-        filter:drop-shadow(1px 1px 7px $secondary) drop-shadow(-1px -1px 0px $primary);
+        filter: drop-shadow(1px 1px 7px $secondary) drop-shadow(-1px -1px 0px $primary);
     }
+
     10% {
         -webkit-filter: drop-shadow(2px 2px 4px $secondary) drop-shadow(-2px -2px 0 $primary);
-        filter:drop-shadow(2px 2px 4px $secondary) drop-shadow(-2px -2px 0 $primary);
+        filter: drop-shadow(2px 2px 4px $secondary) drop-shadow(-2px -2px 0 $primary);
     }
 }
 
@@ -127,28 +142,124 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
         height: 4px;
         background-color: $primary;
     }
+
     &:before {
         opacity: 0;
         transform: translateY(- $distance);
         transition: transform 0s $easeOutBack, opacity 0s;
     }
+
     &:after {
         opacity: 0;
         transform: translateY($distance/2);
         transition: transform $duration $easeOutBack, opacity $duration;
     }
+
     &:hover,
     &:focus {
+
         &:before,
         &:after {
             opacity: 1;
             transform: translateY(0);
         }
+
         &:before {
             transition: transform $duration $easeOutBack, opacity $duration;
         }
+
         &:after {
             transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
         }
     }
+}
+
+.toggle-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.toggle-slot {
+    position: relative;
+    height: 2.5em;
+    width: 5em;
+    border: 2.5px solid #e4e7ec;
+    border-radius: 50em;
+    background-color: white;
+    box-shadow: 0px 5px 10px #e4e7ec;
+    transition: background-color 250ms;
+}
+
+// .toggle-checkbox:checked~.toggle-slot {
+//     background-color: #374151;
+// }
+
+.toggle-button {
+    transform: translate(2.85em, .4em);
+    position: absolute;
+    height: 1.35em;
+    width: 1.35em;
+    border-radius: 50%;
+    background-color: #ffeccf;
+    box-shadow: inset 0px 0px 0px 0.25em #ffbb52;
+    transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26, 2, .46, .71);
+}
+
+// .toggle-checkbox:checked~.toggle-slot .toggle-button {
+//     background-color: #485367;
+//     box-shadow: inset 0px 0px 0px 0.2em white;
+//     transform: translate(.6em, .4em);
+// }
+
+.sun-icon {
+    position: absolute;
+    height: 1.5em;
+    width: 1.5em;
+    color: #ffbb52;
+}
+
+.sun-icon-wrapper {
+    position: absolute;
+    height: 2.5em;
+    width: 2.5em;
+    opacity: 1;
+    transform: translate(.55em, .4em);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26, 2, .46, .71);
+}
+
+// .toggle-checkbox:checked~.toggle-slot .sun-icon-wrapper {
+//     opacity: 0;
+//     transform: translate(3em, 1em) rotate(0deg);
+// }
+
+.moon-icon {
+    position: absolute;
+    height: 1.4em;
+    width: 1.5em;
+    color: white;
+}
+
+.moon-icon-wrapper {
+    position: absolute;
+    height: 2.5em;
+    width: 2.5em;
+    opacity: 0;
+    transform: translate(.5em, .5em) rotate(0deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26, 2.5, .46, .71);
+}
+
+// .toggle-checkbox:checked~.toggle-slot .moon-icon-wrapper {
+//     opacity: 1;
+//     transform: translate(2.75em, .4em);
+// }
+
+// Dark Mode
+#toggle-mode-cb:checked {
+    background-color: #1e1f26;
+    color: darken(white, 50%);
 }

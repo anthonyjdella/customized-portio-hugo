@@ -25,7 +25,7 @@
                         <div class="resume__education_item">
                             <span class="pre-line text-primary"> {{ .time }} </span>
                             <img class="werk" src="{{ .image | absURL }}" alt="skill-img">
-                            {{ .content | markdownify }}
+                            <div class="resume-tile">{{ .content | markdownify }}</div>
                         </div>
                         {{ end }}
 

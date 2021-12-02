@@ -48,6 +48,7 @@
   {{ with site.Params.googleAnalytics }}
   {{ "<!-- Google Analytics -->" | safeHTML }}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+  <script src="https://code.iconify.design/1/1.0.4/iconify.min.js">   </script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
@@ -55,5 +56,9 @@
 
     gtag('config', '{{ . }}');
   </script>
+    {{ $darkmode := resources.Get "js/darkmode.js" | minify }}
+    <script src="{{ $darkmode.Permalink }}"></script>
+    {{ $darktoggle := resources.Get "js/darktoggle.js" | minify }}
+    <script src="{{ $darktoggle.Permalink }}"></script>
   {{ end }}
 </head>

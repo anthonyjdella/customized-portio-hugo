@@ -57,6 +57,19 @@
   </div>
 </section>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function(event) {
+console.log('single blog count: ' + parseInt(localStorage.getItem("toggleCount")))
+
+  if (parseInt(localStorage.getItem("toggleCount")) % 2 == 1) {
+    darkToggleButtonNoIncrement();
+  }
+  else {
+    darkToggleButtonNoIncrement();
+      }
+  });
+</script>
+
 {{ partial "footer.html" . }}
 
 {{ end }}

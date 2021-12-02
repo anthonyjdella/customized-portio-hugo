@@ -35,4 +35,17 @@
 
 {{ partial "footer.html" . }}
 
+<script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+	console.log('about count: ' + parseInt(localStorage.getItem("toggleCount")))
+
+		if (parseInt(localStorage.getItem("toggleCount")) % 2 == 1) {
+			darkToggleButtonNoIncrement();
+		}
+		else {
+			darkToggleButtonNoIncrement();
+        }
+    });
+</script>
+
 {{ end }}
