@@ -94,3 +94,16 @@
 .blog-page__item-content span {
   color: inherit !important;
 }
+
+.blog-page {
+	&__item {
+		position: relative;
+		margin-bottom: 180px;
+		&-thumb {
+			img {
+        width: 100% !important;
+        object-fit: contain;
+			}
+		}
+	}
+}
