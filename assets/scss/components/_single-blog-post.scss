@@ -46,8 +46,12 @@
                 margin: 0;
             }
             img {
-                height: 100%;
-                width: 100%;
+                height: 20em;
+                width: 20em;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                object-fit: contain;
                 border-radius: 20px;
             }
         }
@@ -73,4 +77,25 @@
             }
         }
     }
+}
+
+img[alt="My 2D Design"] {
+    max-width:  15em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+img[alt="Animated"] {
+    max-width:  20em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+img[alt="Web Scraping"] {
+    max-width:  20em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
