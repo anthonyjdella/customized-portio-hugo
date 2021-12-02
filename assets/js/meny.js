@@ -494,14 +494,27 @@ var Meny = {
 							var placeToClick = document.getElementById('content');
 							if( x-100 > config.width && placeToClick.addEventListener('click', function () {
 								close();
-								document.getElementById('hideNavBar').style.display = "block";
+								// document.getElementById('hideNavBar').style.display = "block";
+								document.getElementById('hideNavBar').style.transition = "opacity .8s ease-in";
+								document.getElementById('hideNavBar').style.opacity = "1";
+								document.getElementById('hideNavBar').style.height = "auto";
+								document.getElementById('hideNavBar').style.pointerEvents = "auto";
 							}, false)) {
 								close();;
-								document.getElementById('hideNavBar').style.display = "block";
+								// document.getElementById('hideNavBar').style.display = "block";
+								document.getElementById('hideNavBar').style.transition = "opacity .8s ease-in";
+								document.getElementById('hideNavBar').style.opacity = "1";
+								document.getElementById('hideNavBar').style.height = "auto";
+								document.getElementById('hideNavBar').style.pointerEvents = "auto";
 							}
 							else if( x < config.threshold ) {
 								open();
-								document.getElementById('hideNavBar').style.display = "none";
+								// document.getElementById('hideNavBar').style.display = "none";
+								document.getElementById('hideNavBar').style.transition = "opacity .1s ease-out";
+								document.getElementById('hideNavBar').style.opacity = "0";
+								document.getElementById('hideNavBar').style.height = "0";
+								document.getElementById('hideNavBar').style.overflow = "hidden";
+								document.getElementById('hideNavBar').style.pointerEvents = "none";
 							}
 							break;
 					}
@@ -568,6 +581,10 @@ var Meny = {
 
 				if( isOverContent ) {
 					close();
+					document.getElementById('hideNavBar').style.transition = "opacity .8s ease-in";
+					document.getElementById('hideNavBar').style.opacity = "1";
+					document.getElementById('hideNavBar').style.height = "auto";
+					document.getElementById('hideNavBar').style.pointerEvents = "auto";
 				}
 			}
 
@@ -578,6 +595,11 @@ var Meny = {
 				}
 				else if( config.position === POSITION_L && !isOpen ) {
 					open();
+					document.getElementById('hideNavBar').style.transition = "opacity .1s ease-out";
+					document.getElementById('hideNavBar').style.opacity = "0";
+					document.getElementById('hideNavBar').style.height = "0";
+					document.getElementById('hideNavBar').style.overflow = "hidden";
+					document.getElementById('hideNavBar').style.pointerEvents = "none";
 					return true;
 				}
 			}
@@ -589,6 +611,10 @@ var Meny = {
 				}
 				else if( config.position === POSITION_L && isOpen ) {
 					close();
+					document.getElementById('hideNavBar').style.transition = "opacity .8s ease-in";
+					document.getElementById('hideNavBar').style.opacity = "1";
+					document.getElementById('hideNavBar').style.height = "auto";
+					document.getElementById('hideNavBar').style.pointerEvents = "auto";
 					return true;
 				}
 			}
