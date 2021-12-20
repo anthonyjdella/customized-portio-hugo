@@ -99,8 +99,11 @@
         </div>
         <!-- <a id="area1" class="area" href="#"></a>
           <a id="area2" class="area" href="#"></a> -->
-        <img src="{{ .image | absURL }}" alt="hero-image" style='
-                  -webkit-mask: url({{"images/hero/hero-mask-svg.png" | absURL }});
+        <img src="{{ .image | absURL }}"
+        onmouseover="this.src='{{ .imageMouseOver | absURL }}' "
+        onmouseout="this.src='{{ .image | absURL }}' "
+        alt="hero-image"
+        style='   -webkit-mask: url({{"images/hero/hero-mask-svg.png" | absURL }});
                   -webkit-mask-repeat: no-repeat;
                   -webkit-mask-size: contain;
                 ' />
