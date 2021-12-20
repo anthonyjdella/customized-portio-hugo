@@ -81,12 +81,15 @@
     .resume__education_item {
         padding-right: 100px !important;
     }
+    ::-webkit-scrollbar {
+        width: .5em;
+    }
 }
 
 // Tablet 768px
-@media screen and (min-width: 425px) and (max-width: 768px) {
+@media screen and (min-width: 445px) and (max-width: 768px) {
     .hero-top-title {
-        font-size: 3.25em !important;
+        font-size: 2.25em !important;
     }
     .hero_content {
         padding: 0px !important;
@@ -138,7 +141,7 @@
         width: 100% !important;
     }
     ::-webkit-scrollbar {
-        width: .5em;
+        width: 0em;
     }
     #mobile-dark-toggle {
         display: flex;
@@ -155,10 +158,13 @@
             }
         }
     }
+    .navbar {
+        padding: 2.5px 0px !important;
+    }
 }
 
 // Large Mobile 425px
-@media screen and (min-width: 375px) and (max-width: 425px) {
+@media screen and (min-width: 375px) and (max-width: 445px) {
     .hero-top-title {
         font-size: 1.8em !important;
     }
@@ -213,7 +219,7 @@
         padding-right: 90px !important;
     }
     ::-webkit-scrollbar {
-        width: .5em;
+        width: 0em;
     }
     #mobile-dark-toggle {
         display: flex;
@@ -229,6 +235,9 @@
                 }
             }
         }
+    }
+    .navbar {
+        padding: 5px 0px !important;
     }
 }
 
@@ -285,7 +294,7 @@
         border-left: 26px solid #2a4eff !important;
     }
     ::-webkit-scrollbar {
-        width: .5em;
+        width: 0em;
     }
     #mobile-dark-toggle {
         display: flex;
@@ -311,6 +320,9 @@
                 }
             }
         }
+    }
+    .navbar {
+        padding: 10px 0px !important;
     }
 }
 
@@ -359,7 +371,7 @@
         z-index: 2147483647 !important;
     }
     .navbar {
-        padding: 15px 0px !important;
+        padding: 5px 0px !important;
     }
     .contents {
         overflow-x: hidden !important;
@@ -377,7 +389,7 @@
         font-size: 1.5rem;
     }
     ::-webkit-scrollbar {
-        width: .5em;
+        width: 0em;
     }
     #mobile-dark-toggle {
         display: flex;
