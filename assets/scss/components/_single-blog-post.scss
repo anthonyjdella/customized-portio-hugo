@@ -79,30 +79,15 @@
     }
 }
 
-img[alt="My 2D Design"] {
-    max-width:  15em;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-
-img[alt="Animated"] {
+img[alt="Image"] {
     max-width:  20em;
     margin-left: auto;
     margin-right: auto;
     display: block;
 }
 
-img[alt="Web Scraping"] {
-    max-width:  20em;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-
-img[alt="Firebase"] {
-    max-width:  20em;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+@media screen and (min-width: 445px) and (max-width: 2560px) {
+    img[alt="Image"] {
+        max-width:  50em !important;
+    }
 }
