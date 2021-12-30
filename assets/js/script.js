@@ -140,7 +140,7 @@ $(document).ready(function () {
   // skill animation progress bar
   $('.contents').scroll(function(){
     pos = $('.contents').scrollTop();
-    console.log(pos)
+    // console.log(pos)
     if ( pos > $(".skill__progress_item").offset().top){
       $(".skill__progress_item").addClass("js-animation");
     }
@@ -228,7 +228,7 @@ function initialize() {
   var map;
   var lat = $("#map").data("lat");
   var long = $("#map").data("long");
-  console.log(lat, long);
+  // console.log(lat, long);
   var mapCenter = new google.maps.LatLng(lat, long);
   var style = [
     {
