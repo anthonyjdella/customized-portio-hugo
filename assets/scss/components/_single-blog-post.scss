@@ -90,4 +90,14 @@ img[alt="Image"] {
     img[alt="Image"] {
         max-width:  50em !important;
     }
+
+    .section {
+        .singleBlog {
+            &__feature {
+                img {
+                    width: 50em !important;
+                }
+            }
+        }
+    }
 }
