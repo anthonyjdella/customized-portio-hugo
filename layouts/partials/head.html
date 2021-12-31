@@ -5,7 +5,8 @@
   <title>{{ .Title }}</title>
   <meta name="description" content="The portfolio of Anthony Dellavecchia, Software Engineer">
   <meta name="author" content="Anthony Dellavecchia" />
-  <meta name="keywords" content="Anthony Dellavecchia anthonyjdella software engineer developer full-stack backend back-end frontend front-end designer UX UI product software app web creative portfolio">
+  <meta name="keywords"
+    content="Anthony Dellavecchia anthonyjdella software engineer developer full-stack backend back-end frontend front-end designer UX UI product software app web creative portfolio">
   <meta name="HandheldFriendly" content="true" />
   <meta name="MobileOptimized" content="320" />
   <meta property="og:type" content="software" />
@@ -36,7 +37,8 @@
 
   <link rel="canonical" href="https://www.anthonydellavecchia.com/">
 
-  <link rel="preload" href="{{ "fonts/BogartTrial-Regular.woff2" | absURL }}" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="{{ "fonts/BogartTrial-Regular.woff2" | absURL }}" type="font/woff2" as="font"
+    crossorigin="anonymous">
 
   <link rel="preload" href="{{ "fonts/CervanttisRegular.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
 
@@ -48,17 +50,22 @@
   {{ with site.Params.googleAnalytics }}
   {{ "<!-- Google Analytics -->" | safeHTML }}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
-  <script src="https://code.iconify.design/1/1.0.4/iconify.min.js">   </script>
+  <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"> </script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
 
     gtag('config', '{{ . }}');
   </script>
-    {{ $darkmode := resources.Get "js/darkmode.js" | minify }}
-    <script src="{{ $darkmode.Permalink }}"></script>
-    {{ $darktoggle := resources.Get "js/darktoggle.js" | minify }}
-    <script src="{{ $darktoggle.Permalink }}"></script>
+  {{ $darkmode := resources.Get "js/darkmode.js" | minify }}
+  <script src="{{ $darkmode.Permalink }}"></script>
+  {{ $darktoggle := resources.Get "js/darktoggle.js" | minify }}
+  <script src="{{ $darktoggle.Permalink }}"></script>
   {{ end }}
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8838706728408201"
+    crossorigin="anonymous"></script>
 </head>
