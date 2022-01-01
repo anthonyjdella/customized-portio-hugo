@@ -63,7 +63,7 @@
 						<img src="{{ .Params.featureImage | absURL }}" alt="post-image">
 					</div>
 					<div class="blog-page__item-content bg-white">
-						<span class="small">{{ .PublishDate.Format "January 2, 2006" }}</span>
+						<span class="small">{{ .PublishDate.Format "January 2, 2006" }} &bull; <a href="{{ .Permalink }}#disqus_thread">Comments</a></span>
 						<h5 class="mb-0">
 							<a class="text-dark" href="{{ .Permalink }}">{{ .Title }}</a>
 						</h5>
@@ -86,5 +86,6 @@
 		}
 	});
 </script>
+<script id="dsq-count-scr" src="//anthonydellavecchia.disqus.com/count.js" async></script>
 {{ partial "footer.html" . }}
 {{ end }}
