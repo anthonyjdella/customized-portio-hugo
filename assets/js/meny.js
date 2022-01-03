@@ -388,7 +388,8 @@ var Meny = {
 				if( isOpen ) {
 					isOpen = false;
 
-					Meny.removeClass( dom.wrapper, 'meny-active' );
+					// Disabling the Meny arrow animation after the first use, since the user is aware of how to open Meny.
+					// Meny.removeClass( dom.wrapper, 'meny-active' );
 
 					// Use transforms and transitions if available...
 					if( supports3DTransforms ) {
