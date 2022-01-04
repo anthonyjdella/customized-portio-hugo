@@ -114,3 +114,6 @@
 <script src="{{ $meny.Permalink }}"></script>
 {{ $search := resources.Get "js/search.js" | minify }}
 <script src="{{ $search.Permalink }}" type="module"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch.min.css">
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch-theme-algolia.min.css">

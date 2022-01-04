@@ -50,6 +50,20 @@
 	</div>
 </div> -->
 
+<div id="hits">
+	<!-- Hits widget will appear here -->
+</div>
+
+<script>
+	const search = instantsearch(options);
+	search.addWidget(
+		instantsearch.widgets.hits({
+		container: '#hits'
+		})
+	);
+	search.start();
+</script>
+
 <section class="section blog-page">
 	<div class="container">
 		<div class="row" id="blogSearch">
