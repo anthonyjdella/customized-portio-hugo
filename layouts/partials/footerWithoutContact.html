@@ -54,3 +54,5 @@
 <script src="{{ $script.Permalink }}"></script>
 {{ $meny := resources.Get "js/meny.js" | minify }}
 <script src="{{ $meny.Permalink }}"></script>
+{{ $search := resources.Get "js/search.js" | minify }}
+<script src="{{ $search.Permalink }}" type="module"></script>

@@ -55,12 +55,6 @@
     }
   </script>
   <script src="//code.tidio.co/d01aab1ff0ban8zr2s3ucbrzzczl4gdf.js" async></script>
-  {{ if site.Params.search }}
-  {{ $searchJs := resources.Get "js/search.js"
-    | resources.ExecuteAsTemplate "js/search.js" .
-    | fingerprint }}
-  <script src="{{ $searchJs.RelPermalink }}"></script>
-  {{ end }}
 </body>
 
 </html>

@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "algoliasearch": "^4.11.0",
+    "instantsearch.js": "^4.36.0",
     "microtip": "^0.2.2"
-  }
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "type": "module"
 }
