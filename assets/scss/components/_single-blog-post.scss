@@ -95,9 +95,29 @@ img[alt="Image"] {
         .singleBlog {
             &__feature {
                 img {
-                    width: 50em !important;
+                    width: 30em !important;
                 }
             }
         }
+    }
+}
+
+.blog-by {
+    padding: 30px 50px;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin-top: 1em;
+    margin-left: 10em;
+    margin-right: 10em;
+    background: #1b2031;
+    border-radius: 20px;
+    position: relative;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px){
+    .blog-by {
+        margin-left: 1em;
+        margin-right: 1em;
     }
 }
