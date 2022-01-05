@@ -46,6 +46,19 @@
                   <img src={{ .Params.postImage | absURL }} alt="feature-image">
               </div>
           </div>
+          <div class="col-lg-12">
+            <div class="about_content-inner" style="padding: 30px 50px; display: flex; justify-content: center; width: auto; margin-top: 1em; margin-left: 10em; margin-right: 10em;">
+              <ul class="breadcrumb align-items-center" style="background-color: transparent; margin-bottom: 0px;">
+                <li class="breadcrumb-item">Written by {{ .Params.authors }}</li>
+                <li class="breadcrumb-item">on {{ .PublishDate.Format "January 2, 2006" }}</li>
+              </ul>
+              <div class="vertical-line"></div>
+              <div class="breadcrumb align-items-center" style="background-color: transparent; margin-bottom: 0px;">Topics:</div>
+              {{ range .Params.tags }}
+                <a href="javascript:void(0)" style="cursor: default; padding: .75rem 1rem;">#{{ . }} &nbsp; </a>
+              {{ end }}
+            </div>
+          </div>
       </div>
       <div class="row mt-5">
           <div class="col-lg-12">
