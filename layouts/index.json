@@ -1,9 +1,9 @@
 {{/* Generates a valid Algolia search index */}}
 {{- $.Scratch.Add "index" slice -}}
-{{- $section := $.Site.GetPage "section" .Section }}
-{{- range .Site.AllPages -}}
-  {{- if or (and (.IsDescendant $section) (and (not .Draft) (not .Params.private))) $section.IsHome -}}
-    {{- $.Scratch.Add "index" (dict "objectID" .UniqueID "date" .Date.UTC.Unix "fuzzywordcount" .FuzzyWordCount "kind" .Kind "lastmod" .Lastmod.UTC.Unix "permalink" .Permalink "publishdate" .PublishDate "readingtime" .ReadingTime "relpermalink" .RelPermalink "summary" .Summary "title" .Title "type" .Type "url" .RelPermalink "wordcount" .WordCount "section" .Section "tags" .Params.Tags "authors" .Params.Authors)}}
-  {{- end -}}
+
+{{- range .Site.RegularPages -}}
+
+    {{- $.Scratch.Add "index" (dict "objectID" .UniqueID "date" .Date.UTC.Unix "fuzzywordcount" .FuzzyWordCount "kind" .Kind "lastmod" .Lastmod.UTC.Unix "permalink" .Permalink "publishdate" .PublishDate "readingtime" .ReadingTime "relpermalink" .RelPermalink "summary" .Summary "title" .Title "type" .Type "url" .RelPermalink "wordcount" .WordCount "section" .Section "tags" .Params.Tags "authors" .Params.Authors "image" .Params.FeatureImage)}}
+
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}
