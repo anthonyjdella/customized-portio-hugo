@@ -110,6 +110,14 @@ function darkModeTheme() {
         var blogBox = blogBoxes[i];
         blogBox.classList.toggle("darker-bg");
     }
+    var algoliaSearchBox = document.getElementsByClassName("ais-SearchBox-input")[0];
+    if (algoliaSearchBox != undefined) {
+        algoliaSearchBox.classList.toggle("dark-bg")
+    }
+    var algoliaShowMore = document.getElementsByClassName("ais-Menu-showMore")[0];
+    if (algoliaShowMore != undefined) {
+        algoliaShowMore.classList.toggle("show-more-dark")
+    }
 
     content.classList.toggle("dark-mode");
     navbar.classList.toggle("dark-mode");
