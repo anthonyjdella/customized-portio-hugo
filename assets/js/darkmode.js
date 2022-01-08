@@ -108,7 +108,7 @@ function darkModeTheme() {
 
     for (i = 0; i < blogBoxes.length; i++) {
         var blogBox = blogBoxes[i];
-        blogBox.classList.toggle("darker-bg");
+        blogBox.classList.toggle("dark-bg");
     }
     var algoliaSearchBox = document.getElementsByClassName("ais-SearchBox-input")[0];
     if (algoliaSearchBox != undefined) {

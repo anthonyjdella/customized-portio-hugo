@@ -104,7 +104,7 @@ search.addWidget(
                             <div class="col-lg-12">
                                 <div class="blog-page__item" style="margin-bottom: 5em !important;">
                                     <div class="blog-page__item-thumb">
-                                        <a id="purple-cursor" class="text-dark white-text" href="{{ permalink }}">
+                                        <a id="purple-cursor" class="text-dark" href="{{ permalink }}">
                                             <img src="https://anthonydellavecchia.com/{{ image }}" alt="post-image">
                                         </a>
                                     </div>
