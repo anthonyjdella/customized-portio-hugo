@@ -1,5 +1,19 @@
 // 4k Laptops 2560px
 @media screen and (min-width: 1440px) and (max-width: 2560px) {
+    ::placeholder {
+        font-size: 1.1em !important;
+    }
+    #search-box {
+        margin: auto;
+        width: 40%;
+    }
+    .ais-Menu {
+        margin: auto !important;
+        width: 35% !important;
+    }
+    .ais-Pagination-list {
+        width: 7.5% !important;
+    }
 }
 
 // Large Laptops 1440px
@@ -37,6 +51,16 @@
     }
     .contents {
         overflow-x: hidden !important;
+    }
+    ::placeholder {
+        font-size: 1.4em !important;
+    }
+    .ais-Menu {
+        margin: auto !important;
+        width: 45% !important;
+    }
+    .ais-Pagination-list {
+        width: 15% !important;
     }
 }
 
@@ -83,6 +107,16 @@
     }
     ::-webkit-scrollbar {
         width: .5em;
+    }
+    ::placeholder {
+        font-size: 1.4em !important;
+    }
+    .ais-Menu {
+        margin: auto !important;
+        width: 50% !important;
+    }
+    .ais-Pagination-list {
+        width: 20% !important;
     }
 }
 
@@ -161,6 +195,12 @@
     .navbar {
         padding: 2.5px 0px !important;
     }
+    ::placeholder {
+        font-size: 1.45em !important;
+    }
+    .ais-Pagination-list {
+        width: 30% !important;
+    }
 }
 
 // Large Mobile 425px
@@ -238,6 +278,9 @@
     }
     .navbar {
         padding: 5px 0px !important;
+    }
+    ::placeholder {
+        font-size: 1em !important;
     }
 }
 
@@ -323,6 +366,9 @@
     }
     .navbar {
         padding: 10px 0px !important;
+    }
+    ::placeholder {
+        font-size: .85em !important;
     }
 }
 
@@ -415,6 +461,9 @@
                 }
             }
         }
+    }
+    ::placeholder {
+        font-size: .75em !important;
     }
 }
 
