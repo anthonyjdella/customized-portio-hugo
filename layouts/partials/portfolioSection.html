@@ -15,7 +15,9 @@
         <div class="portfolio-item-grid">
           {{ range (where $.Site.RegularPages "Type" "portfolio") }}
           <div class="portfolio-item">
-            <img src="{{ .Params.featureImage }}" class="portfolio-item-thumb" alt="portfolio-thumb" />
+              <a id="purple-cursor" class="text-dark" href="{{ .Permalink }}">
+              <img src="{{ .Params.featureImage }}" class="portfolio-item-thumb" alt="portfolio-thumb" />
+            </a>
             <div class="portfolio-item-content">
               <span class="skills-used">{{ .Params.service }}</span>
               <h3 class="mb-0">
