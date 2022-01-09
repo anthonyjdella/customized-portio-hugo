@@ -14,6 +14,9 @@
     .ais-Pagination-list {
         width: 7.5% !important;
     }
+    .contents {
+        overflow-x: hidden !important;
+    }
 }
 
 // Large Laptops 1440px
@@ -117,6 +120,9 @@
     }
     .ais-Pagination-list {
         width: 20% !important;
+    }
+    .contents {
+        overflow-x: hidden !important;
     }
 }
 
