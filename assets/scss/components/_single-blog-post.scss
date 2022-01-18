@@ -115,6 +115,15 @@ img[alt="Image"] {
     position: relative;
 }
 
+#thanks-for-reading-pic {
+    float: left;
+    width: 50%;
+}
+
+#thanks-for-reading-content {
+    float: right;
+}
+
 @media screen and (min-width: 320px) and (max-width: 1024px){
     .blog-by {
         margin-left: 1em;
