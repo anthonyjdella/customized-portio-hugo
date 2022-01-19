@@ -101,6 +101,9 @@
 }
 
 .poke {
+    margin: 10px;
+    width: 80px;
+    height: 80px;
     -webkit-filter: drop-shadow(1px 1px 1px $primary) drop-shadow(-1px -1px -0 $primary);
     filter: drop-shadow(1px 1px 7px $primary) drop-shadow(-1px -1px 0 $primary);
     animation: pulsate 1.5s ease-out infinite;
