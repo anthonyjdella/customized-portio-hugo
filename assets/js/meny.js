@@ -227,7 +227,7 @@ var Meny = {
 				dom.cover.style.visibility = 'hidden';
 				dom.cover.style.opacity = 0;
 				dom.cover.style.color = '#5d78ff';
-				dom.cover.style.border = '1rem ridge #5d78ff';
+				dom.cover.style.border = '.5rem ridge #5d78ff';
 				// dom.cover.setAttribute("style", "font-size: 5rem;");
 
 				// Silence unimportant errors in IE8
