@@ -80,7 +80,7 @@
     height: 2em;
     display: inline-block;
     position: relative;
-    bottom: .75em;
+    bottom: .5em;
 }
 
 .hello-there {
@@ -88,7 +88,7 @@
     position: relative;
     left: -3.25em;
     display: inline-block;
-    bottom: .6em;
+    bottom: .45em;
 }
 
 .poke:hover+.bubble {
@@ -103,7 +103,7 @@
 .poke {
     margin: 10px;
     width: 80px;
-    height: 80px;
+    height: 40px;
     -webkit-filter: drop-shadow(1px 1px 1px $primary) drop-shadow(-1px -1px -0 $primary);
     filter: drop-shadow(1px 1px 7px $primary) drop-shadow(-1px -1px 0 $primary);
     animation: pulsate 1.5s ease-out infinite;
