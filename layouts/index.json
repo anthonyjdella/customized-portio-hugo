@@ -3,7 +3,7 @@
 
 {{- range where .Site.RegularPages ".Type" "blog" -}}
 
-    {{- $.Scratch.Add "index" (dict "objectID" .UniqueID "date" .Date.UTC.Unix "fuzzywordcount" .FuzzyWordCount "kind" .Kind "lastmod" .Lastmod.UTC.Unix "permalink" .Permalink "publishdate" .PublishDate "readingtime" .ReadingTime "relpermalink" .RelPermalink "summary" .Summary "title" .Title "type" .Type "url" .RelPermalink "wordcount" .WordCount "section" .Section "tags" .Params.Tags "authors" .Params.Authors "image" .Params.FeatureImage "writtendate" .Params.WrittenDate)}}
+    {{- $.Scratch.Add "index" (dict "objectID" .File.UniqueID "date" .Date.UTC.Unix "fuzzywordcount" .FuzzyWordCount "kind" .Kind "lastmod" .Lastmod.UTC.Unix "permalink" .Permalink "publishdate" .PublishDate "readingtime" .ReadingTime "relpermalink" .RelPermalink "summary" .Summary "title" .Title "type" .Type "url" .RelPermalink "wordcount" .WordCount "section" .Section "tags" .Params.Tags "authors" .Params.Authors "image" .Params.FeatureImage "writtendate" .Params.WrittenDate)}}
 
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}

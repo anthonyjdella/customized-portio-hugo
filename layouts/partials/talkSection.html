@@ -1,0 +1,63 @@
+{{ with .Site.Data.talksSection }}
+{{ if .enable }}
+<section class="section resume" id="resume">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="resume__heading">
+                    <div class="text-dark">
+                        <span class="top-title pre-line">{{ .topTitle }}</span>
+                        {{ .title | markdownify }}
+                    </div>
+
+                    <div class="btn-group nav mt-5">
+                        <a id="purple-cursor" href="#{{.tab1Target}}" class="btn btn-primary active" data-toggle="tab">{{ .tab1Name }}</a>
+                        <a id="purple-cursor" href="#{{.tab2Target}}" class="btn btn-primary" data-toggle="tab">{{ .tab2Name }}</a>
+                        <a id="purple-cursor" href="#{{.tab3Target}}" class="btn btn-primary" data-toggle="tab">{{ .tab3Name }}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="tab-content ">
+                    <div class="resume__education tab-pane active" id="{{.tab1Target}}">
+                        {{ $Section := .talks }}
+                        {{ range $Section }}
+                        <div class="resume__education_item">
+                            <span class="pre-line text-primary"> {{ .time }} </span>
+                            <img class="werk" src="{{ .image | absURL }}" alt="skill-img">
+                            <div class="resume-tile">{{ .content | markdownify }}</div>
+                        </div>
+                        {{ end }}
+                    </div>
+
+                    <div class="resume__education tab-pane" id="{{.tab2Target}}">
+                        {{ $Section := .workshop }}
+                        {{ range $Section }}
+                        <div class="resume__education_item">
+                            <span class="pre-line text-primary"> {{ .time }} </span>
+                            <img class="werk" src="{{ .image | absURL }}" alt="skill-img">
+                            {{ .content | markdownify }}
+                            <br>
+                        </div>
+                        {{ end }}
+                    </div>
+
+                    <div class="resume__education tab-pane" id="{{.tab3Target}}">
+                        {{ $Section := .booths }}
+                        {{ range $Section }}
+                        <div class="resume__education_item">
+                            <span class="pre-line text-primary"> {{ .time }} </span>
+                            <img class="werk" src="{{ .image | absURL }}" alt="skill-img">
+                            {{ .content | markdownify }}
+                            <br>
+                        </div>
+                        {{ end }}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}
