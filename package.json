@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "algoliasearch": "^4.11.0",
-    "instantsearch.js": "^4.36.0",
+    "instantsearch.js": "^4.43.1",
     "microtip": "^0.2.2"
   },
   "engines": {
