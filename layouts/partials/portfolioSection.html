@@ -13,7 +13,7 @@
     <div class="row">
       <div class="col-12">
         <div class="portfolio-item-grid">
-          {{ range (where $.Site.RegularPages "Type" "portfolio") }}
+          {{ range first 4 (where $.Site.RegularPages "Type" "portfolio") }}
           <div class="portfolio-item">
               <a id="purple-cursor" class="text-dark" href="{{ .Permalink }}">
               <img src="{{ .Params.featureImage }}" class="portfolio-item-thumb" alt="portfolio-thumb" />
@@ -29,6 +29,13 @@
           {{ end }}
         </div>
       </div>
+    </div>
+    <div class="row mb-5">
+      	<div class="col-lg-6">
+          <div class="blog-preview__header_button desktop">
+            <a class="btn btn-outline-primary btn-zoom m-3" style="position: relative;" id="purple-cursor" href="{{ .buttonTarget | absURL }}">View more</a>
+          </div>
+			</div>
     </div>
   </div>
 </section>
