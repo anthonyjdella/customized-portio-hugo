@@ -93,8 +93,8 @@
     }
     &-popup {
       position: absolute;
-      bottom: -100px;
-      left: 0;
+      bottom: -70px;
+      left: 50px;
       transform: translateX(-50%);
       transition: all 0.3s ease;
       @include desktop {
@@ -104,10 +104,10 @@
       }
       .thumb {
         border: 1px solid #707070;
-        border-radius: 20px;
+        border-radius: 200px;
         overflow: hidden;
         position: relative;
-        width: 17.5em;
+        width: 13.5em;
         height: 13em;
         &::before {
           position: absolute;
@@ -184,7 +184,7 @@
 }
 
 .hero-bottom-title {
-  font-size: .75em;
+  font-size: .6em;
 }
 
 @keyframes move_left {
