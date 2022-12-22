@@ -17,11 +17,11 @@
                     {{ range $Section }}
                     <div class="service__slider_item">
                         <div class="service__slider_item-icon">
-                            <div class="icon" style="transform: scale(0.25); bottom: -10em !important; left: -3em !important;">
+                            <div class="icon" style="transform: scale(0.5)">
                                 <img src=" {{ .image | absURL }} " alt="ui-ux">
                             </div>
                         </div>
-                        <div class="mt-5">
+                        <div class="mt-2">
                             {{ .content | markdownify }}
                         </div>
                     </div>
