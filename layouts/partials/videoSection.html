@@ -1,22 +1,24 @@
 {{ with .Site.Data.videoSection }}
 {{ if .enable }}
-<section class="section service" id="service">
+<section class="section video" id="video">
+    <div class="video__background">
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="service__header mb-5">
-                    <span class="top-title pre-line">{{ .topTitle }}</span>
+                <div class="video__header mb-5">
+                    <span class="top-title">{{ .topTitle }}</span>
                     {{ .title | markdownify }}
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <div class="service__slider">
+                <div class="video__slider">
                     {{ $Section := .video }}
                     {{ range $Section }}
-                    <div class="service__slider_item">
-                        <div class="service__slider_item-icon">
+                    <div class="video__slider_item">
+                        <div class="video_slider_item-icon">
                             <div class="icon" style="transform: scale(0.5)">
                                 <img src=" {{ .image | absURL }} " alt="ui-ux">
                             </div>
