@@ -8,11 +8,12 @@
 		}
 		.algolia {
 			margin: auto;
-			width: 80%;
+			/* width: 80%; */
 		}
 		#search-box {
 			padding-top: 1em;
 			padding-bottom: 1em;
+			width: 70%;
 		}
 		.ais-SearchBox-form {
 			background-color: transparent !important;
@@ -91,6 +92,7 @@
 			line-height: 1.5 !important;
 			margin: auto !important;
 			width: 50%;
+			justify-content: center;
 		}
 		.ais-Pagination-item--selected .ais-Pagination-link {
 			color: #fff !important;
@@ -135,12 +137,16 @@
 	</div>
 </header>
 
-<div class="algolia">
-	<div id="search-box"></div>
+<div class="row algolia">
+	<div class="col-lg-5" id="search-box"></div>
+	<div class="col-lg-7" id="rss">
+		<a class="btn btn-lg btn-primary btn-zoom" id="resumeRegistry" target="_blank" href="https://anthonydellavecchia.com/blog/index.xml">Subscribe to RSS Feed
+        </a>
+	</div>
 	<!-- <div id="current-refined-values"></div> -->
 	<div id="topics"><div id="refinement-list"></div></div>
 	<div id="sort-by"></div>
-	<!-- <div id="clear-all"></div> -->
+	<div id="clear-all"></div>
 </div>
 <div id="hits"></div>
 <div id="pagination"></div>

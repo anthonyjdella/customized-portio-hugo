@@ -20,14 +20,14 @@ const insightsMiddleware = instantsearch.middlewares.createInsightsMiddleware({
 // );
 
 // initialize clearRefinements
-// search.addWidget(
-//     instantsearch.widgets.clearRefinements({
-//         container: '#clear-all',
-//         templates: {
-//             resetLabel: 'Clear all filters'
-//         }
-//     })
-// );
+search.addWidget(
+    instantsearch.widgets.clearRefinements({
+        container: '#clear-all',
+        templates: {
+            resetLabel: 'Clear all filters'
+        }
+    })
+);
 
 // initialize pagination
 search.addWidget(
@@ -54,7 +54,7 @@ search.addWidget(
 
 search.addWidget(
     instantsearch.widgets.configure({
-        hitsPerPage: 4
+        hitsPerPage: 6
     })
 );
 
@@ -64,7 +64,7 @@ search.addWidget(
         container: '#refinement-list',
         attribute: 'tags',
         showMore: true,
-        limit: 3,
+        limit: 11,
         sortBy: ['count:desc']
     })
 );
@@ -97,7 +97,7 @@ search.addWidget(
             empty: '<h3 style="text-align: center;">No results found 😔. Search something else.</h3>',
             item:
             `
-                <section class="section blog-page">
+                <section class="blog-page">
                     <div class="container">
                         <div class="row" id="blogSearch">
                             {{ range .Paginator.Pages }}
