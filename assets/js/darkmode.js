@@ -67,6 +67,28 @@ function darkModeTheme() {
             serviceItem.classList.toggle("dark-bg");
         }
     }
+    var slideBG = document.getElementsByClassName("slide__background")[0];
+    if (slideBG != undefined) {
+        slideBG.classList.toggle("servicebg-dark-mode");
+    }
+    var slideItems = document.getElementsByClassName("slide__slider_item");
+    if (slideItems != undefined) {
+        for (i = 0; i < slideItems.length; i++) {
+            var slideItem = slideItems[i];
+            slideItem.classList.toggle("dark-bg");
+        }
+    }
+    var videoBG = document.getElementsByClassName("video__background")[0];
+    if (videoBG != undefined) {
+        videoBG.classList.toggle("servicebg-dark-mode");
+    }
+    var videoItems = document.getElementsByClassName("video__slider_item");
+    if (videoItems != undefined) {
+        for (i = 0; i < videoItems.length; i++) {
+            var videoItem = videoItems[i];
+            videoItem.classList.toggle("dark-bg");
+        }
+    }
     var testimonial = document.getElementsByClassName("testimonial")[0];
     if (testimonial != undefined) {
         testimonial.classList.toggle("darkest-bg")
