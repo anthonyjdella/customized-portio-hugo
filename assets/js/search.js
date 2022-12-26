@@ -64,7 +64,7 @@ search.addWidget(
         container: '#refinement-list',
         attribute: 'tags',
         showMore: true,
-        limit: 11,
+        limit: 10,
         sortBy: ['count:desc']
     })
 );
