@@ -107,7 +107,7 @@
         }
     }
     &__widget {
-        padding: 100px 0;
+        padding: 50px 0;
         @include desktop {
             text-align: center;
             padding: 50px 0;
@@ -151,5 +151,5 @@
 #signature {
     text-align: center;
     font-family: "Cervanttis";
-    font-size: 2em;
+    font-size: 1em;
 }
