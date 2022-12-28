@@ -1,17 +1,26 @@
 {{ with .Site.Data.liveSection }}
 {{ if .enable }}
-<section class="section live" id="live">
-	<header class="breadCrumb">
 
-	</header>
+<header class="breadCrumb">
     <div class="container">
-        <div class="row text-center">
-            <div class="col-lg-6 offset-lg-3">
-                <div class="live_header mb-5">
-                    {{ .title | markdownify}}
-                </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 class="breadCrumb__title">Watch My Livestream</h3>
+                <nav
+                    aria-label="breadcrumb"
+                    class="d-flex justify-content-center"
+                >
+                    <ol class="breadcrumb align-items-center">
+                        <li class="breadcrumb-item active" aria-current="page">Follow me on Twitch</li>
+                    </ol>
+                </nav>
             </div>
         </div>
+    </div>
+</header>
+
+<section class="section live" id="live">
+    <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="live_content">
