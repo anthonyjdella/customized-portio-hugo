@@ -1,6 +1,21 @@
 {{ define "main" }}
 
 <header class="breadCrumb">
+	<div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 class="breadCrumb__title">Speaking Engagements</h3>
+                <nav
+                    aria-label="breadcrumb"
+                    class="d-flex justify-content-center"
+                >
+                    <ol class="breadcrumb align-items-center">
+                        <li class="breadcrumb-item active" aria-current="page">Speaker Portfolio</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
 	<div class="animate-shape">
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 600">
 			<defs>
@@ -21,6 +36,8 @@
 </header>
 
 {{ partial "talkSection.html" . }}
+
+{{ partial "talkMapSection.html" . }}
 
 {{ partial "slideDeckSection.html" . }}
 

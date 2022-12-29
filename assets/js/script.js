@@ -502,3 +502,254 @@ function initialize() {
 if ($("#map").length > 0) {
   google.maps.event.addDomListener(window, "load", initialize);
 }
+
+function initializeTalkMap() {
+    var locations = [
+        ["API Days NYC", 40.7128, -74.006, 1],
+        ["Twilio Meetup", 47.6062, -122.3321, 2],
+        ["Transform Together", 41.8781, -87.6298, 3],
+        ["PennApps", 39.9522, -75.1932, 4],
+        ["Spiceworld", 30.2672, -97.7431, 5],
+        ["KCDC", 39.0997, -94.5786, 6],
+        ["DjangoCon", 32.7157, -117.1611, 7],
+    ];
+
+    var style = [
+        {
+            featureType: "water",
+            elementType: "geometry",
+            stylers: [
+                {
+                    color: "#e9e9e9",
+                },
+                {
+                    lightness: 17,
+                },
+            ],
+        },
+        {
+            featureType: "landscape",
+            elementType: "geometry",
+            stylers: [
+                {
+                    color: "#f5f5f5",
+                },
+                {
+                    lightness: 20,
+                },
+            ],
+        },
+        {
+            featureType: "road.highway",
+            elementType: "geometry.fill",
+            stylers: [
+                {
+                    color: "#ffffff",
+                },
+                {
+                    lightness: 17,
+                },
+            ],
+        },
+        {
+            featureType: "road.highway",
+            elementType: "geometry.stroke",
+            stylers: [
+                {
+                    color: "#ffffff",
+                },
+                {
+                    lightness: 29,
+                },
+                {
+                    weight: 0.2,
+                },
+            ],
+        },
+        {
+            featureType: "road.arterial",
+            elementType: "geometry",
+            stylers: [
+                {
+                    color: "#ffffff",
+                },
+                {
+                    lightness: 18,
+                },
+            ],
+        },
+        {
+            featureType: "road.local",
+            elementType: "geometry",
+            stylers: [
+                {
+                    color: "#ffffff",
+                },
+                {
+                    lightness: 16,
+                },
+            ],
+        },
+        {
+            featureType: "poi",
+            elementType: "geometry",
+            stylers: [
+                {
+                    color: "#f5f5f5",
+                },
+                {
+                    lightness: 21,
+                },
+            ],
+        },
+        {
+            featureType: "poi.park",
+            elementType: "geometry",
+            stylers: [
+                {
+                    color: "#dedede",
+                },
+                {
+                    lightness: 21,
+                },
+            ],
+        },
+        {
+            elementType: "labels.text.stroke",
+            stylers: [
+                {
+                    visibility: "on",
+                },
+                {
+                    color: "#ffffff",
+                },
+                {
+                    lightness: 16,
+                },
+            ],
+        },
+        {
+            elementType: "labels.text.fill",
+            stylers: [
+                {
+                    saturation: 36,
+                },
+                {
+                    color: "#333333",
+                },
+                {
+                    lightness: 40,
+                },
+            ],
+        },
+        {
+            elementType: "labels.icon",
+            stylers: [
+                {
+                    visibility: "off",
+                },
+            ],
+        },
+        {
+            featureType: "transit",
+            elementType: "geometry",
+            stylers: [
+                {
+                    color: "#f2f2f2",
+                },
+                {
+                    lightness: 19,
+                },
+            ],
+        },
+        {
+            featureType: "administrative",
+            elementType: "geometry.fill",
+            stylers: [
+                {
+                    color: "#fefefe",
+                },
+                {
+                    lightness: 20,
+                },
+            ],
+        },
+        {
+            featureType: "administrative",
+            elementType: "geometry.stroke",
+            stylers: [
+                {
+                    color: "#fefefe",
+                },
+                {
+                    lightness: 17,
+                },
+                {
+                    weight: 1.2,
+                },
+            ],
+        },
+    ];
+
+    var map = new google.maps.Map(document.getElementById("talkMap"), {
+        zoom: 4,
+        center: new google.maps.LatLng(37.0902, -95.7129),
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        draggable: false,
+        panControl: false,
+        scrollwheel: false,
+        zoomControl: false,
+        mapTypeControl: true,
+        scaleControl: false,
+        streetViewControl: false,
+        overviewMapControl: false,
+        disableDoubleClickZoom: true,
+        fullscreenControl: false,
+        zoomControlOptions: {
+            style: google.maps.ZoomControlStyle.LARGE,
+        },
+    });
+
+    var mapType = new google.maps.StyledMapType(style, {
+        name: "Grayscale",
+    });
+    map.mapTypes.set("grey", mapType);
+    map.setMapTypeId("grey");
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker_image = $("#talkMap").data("pin");
+    var pinIcon = new google.maps.MarkerImage(
+        marker_image,
+        null,
+        null,
+        null,
+        new google.maps.Size(25, 34)
+    );
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+            map: map,
+            icon: pinIcon,
+        });
+
+        google.maps.event.addListener(
+            marker,
+            "click",
+            (function (marker, i) {
+                return function () {
+                    infowindow.setContent(locations[i][0]);
+                    infowindow.open(map, marker);
+                };
+            })(marker, i)
+        );
+    }
+}
+
+
+if ($("#talkMap").length > 0) {
+    google.maps.event.addDomListener(window, "load", initializeTalkMap);
+}
