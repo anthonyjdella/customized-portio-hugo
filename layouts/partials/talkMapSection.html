@@ -1,8 +1,8 @@
 <section class="section">
-    <div class="row" style="height: 600px;">
+    <div class="row" style="max-height: 500px; height: 500px;">
         <div class="col-lg-12">
             {{ $map := .Site.Params.talkMap }}
-            <div id="talkMap" data-lat={{ $map.latitude }} data-long={{ $map.longitude }} data-pin={{ $map.pinImage | absURL }} style="display: contents;">
+            <div id="talkMap" data-lat={{ $map.latitude }} data-long={{ $map.longitude }} data-pin={{ $map.pinImage | absURL }}>
             </div>
         </div>
     </div>

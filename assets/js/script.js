@@ -503,252 +503,341 @@ if ($("#map").length > 0) {
   google.maps.event.addDomListener(window, "load", initialize);
 }
 
+const locations = [
+    {
+        name: "API Days NYC",
+        loc: "New York City, NY",
+        action: "gave a talk and workshop",
+        title: "gaining trust in APIs and live coding an NBA app",
+        presentation: "https://noti.st/anthonyjdella/FW4Dy9",
+        report: "https://anthonydellavecchia.com/blog/api-days-report/",
+        year: "July 2022",
+        image: "/images/trip-report/apidays4.JPG",
+        lat: 40.7128,
+        long: -74.006,
+    },
+    {
+        name: "Twilio Meetup",
+        loc: "Seattle, WA",
+        action: "gave a talk and workshop",
+        title: "building a Halloween App with Twilio",
+        presentation: "https://noti.st/anthonyjdella/YEMatV",
+        report: "https://anthonydellavecchia.com/blog/halloween-report/",
+        year: "October 2022",
+        image: "/images/trip-report/halloween9.jpg",
+        lat: 47.6062,
+        long: -122.3321,
+    },
+    {
+        name: "Transform Together",
+        loc: "Chicago, IL",
+        action: "gave a talk and workshop",
+        title: "building an app that sends pictures of mars via email",
+        presentation: "https://noti.st/anthonyjdella/6TEdbM",
+        report: "",
+        year: "June 2022",
+        image: "/images/trip-report/transform1.jpeg",
+        lat: 41.8781,
+        long: -87.6298,
+    },
+    {
+        name: "PennApps",
+        loc: "Philadelphia, PA",
+        action: "gave a talk and workshop",
+        title: "building an app that summarizes an images text",
+        presentation: "https://noti.st/anthonyjdella/L6gFMA",
+        report: "",
+        year: "September 2022",
+        image: "/images/trip-report/pennapps1.jpeg",
+        lat: 39.9522,
+        long: -75.1932,
+    },
+    {
+        name: "Spiceworld",
+        loc: "Austin, TX",
+        action: "gave a talk and workshop",
+        title: "building an app summarizes an images text",
+        presentation: "https://noti.st/anthonyjdella/L6gFMA",
+        report: "https://anthonydellavecchia.com/blog/spiceworld-report/",
+        year: "September 2022",
+        image: "/images/trip-report/spice3.jpg",
+        lat: 30.2672,
+        long: -97.7431,
+    },
+    {
+        name: "KCDC",
+        loc: "Kansas City, MO",
+        action: "attended",
+        title: "connecting with developers",
+        presentation: "",
+        report: "",
+        year: "August 2022",
+        image: "/images/trip-report/kcdc1.jpg",
+        lat: 39.0997,
+        long: -94.5786,
+    },
+    {
+        name: "DjangoCon",
+        loc: "San Diego, CA",
+        action: "attended",
+        title: "connecting with the Django community",
+        presentation: "",
+        report: "https://anthonydellavecchia.com/blog/djangocon-report/",
+        year: "October 2022",
+        image: "/images/trip-report/django4.jpg",
+        lat: 32.7157,
+        long: -117.1611,
+    },
+];
+
+const style = [
+    {
+        featureType: "water",
+        elementType: "geometry",
+        stylers: [
+            {
+                color: "#e9e9e9",
+            },
+            {
+                lightness: 17,
+            },
+        ],
+    },
+    {
+        featureType: "landscape",
+        elementType: "geometry",
+        stylers: [
+            {
+                color: "#f5f5f5",
+            },
+            {
+                lightness: 20,
+            },
+        ],
+    },
+    {
+        featureType: "road.highway",
+        elementType: "geometry.fill",
+        stylers: [
+            {
+                color: "#ffffff",
+            },
+            {
+                lightness: 17,
+            },
+        ],
+    },
+    {
+        featureType: "road.highway",
+        elementType: "geometry.stroke",
+        stylers: [
+            {
+                color: "#ffffff",
+            },
+            {
+                lightness: 29,
+            },
+            {
+                weight: 0.2,
+            },
+        ],
+    },
+    {
+        featureType: "road.arterial",
+        elementType: "geometry",
+        stylers: [
+            {
+                color: "#ffffff",
+            },
+            {
+                lightness: 18,
+            },
+        ],
+    },
+    {
+        featureType: "road.local",
+        elementType: "geometry",
+        stylers: [
+            {
+                color: "#ffffff",
+            },
+            {
+                lightness: 16,
+            },
+        ],
+    },
+    {
+        featureType: "poi",
+        elementType: "geometry",
+        stylers: [
+            {
+                color: "#f5f5f5",
+            },
+            {
+                lightness: 21,
+            },
+        ],
+    },
+    {
+        featureType: "poi.park",
+        elementType: "geometry",
+        stylers: [
+            {
+                color: "#dedede",
+            },
+            {
+                lightness: 21,
+            },
+        ],
+    },
+    {
+        elementType: "labels.text.stroke",
+        stylers: [
+            {
+                visibility: "on",
+            },
+            {
+                color: "#ffffff",
+            },
+            {
+                lightness: 16,
+            },
+        ],
+    },
+    {
+        elementType: "labels.text.fill",
+        stylers: [
+            {
+                saturation: 36,
+            },
+            {
+                color: "#333333",
+            },
+            {
+                lightness: 40,
+            },
+        ],
+    },
+    {
+        elementType: "labels.icon",
+        stylers: [
+            {
+                visibility: "off",
+            },
+        ],
+    },
+    {
+        featureType: "transit",
+        elementType: "geometry",
+        stylers: [
+            {
+                color: "#f2f2f2",
+            },
+            {
+                lightness: 19,
+            },
+        ],
+    },
+    {
+        featureType: "administrative",
+        elementType: "geometry.fill",
+        stylers: [
+            {
+                color: "#fefefe",
+            },
+            {
+                lightness: 20,
+            },
+        ],
+    },
+    {
+        featureType: "administrative",
+        elementType: "geometry.stroke",
+        stylers: [
+            {
+                color: "#fefefe",
+            },
+            {
+                lightness: 17,
+            },
+            {
+                weight: 1.2,
+            },
+        ],
+    },
+];
+
 function initializeTalkMap() {
-    var locations = [
-        ["API Days NYC", 40.7128, -74.006, 1],
-        ["Twilio Meetup", 47.6062, -122.3321, 2],
-        ["Transform Together", 41.8781, -87.6298, 3],
-        ["PennApps", 39.9522, -75.1932, 4],
-        ["Spiceworld", 30.2672, -97.7431, 5],
-        ["KCDC", 39.0997, -94.5786, 6],
-        ["DjangoCon", 32.7157, -117.1611, 7],
-    ];
+  var map = new google.maps.Map(document.getElementById("talkMap"), {
+      zoom: 4,
+      center: new google.maps.LatLng(40.0902, -95.7129),
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      draggable: true,
+      panControl: false,
+      scrollwheel: false,
+      zoomControl: true,
+      mapTypeControl: true,
+      scaleControl: false,
+      streetViewControl: false,
+      overviewMapControl: false,
+      disableDoubleClickZoom: true,
+      fullscreenControl: false,
+      zoomControlOptions: {
+          style: google.maps.ZoomControlStyle.LARGE,
+      },
+  });
 
-    var style = [
-        {
-            featureType: "water",
-            elementType: "geometry",
-            stylers: [
-                {
-                    color: "#e9e9e9",
-                },
-                {
-                    lightness: 17,
-                },
-            ],
-        },
-        {
-            featureType: "landscape",
-            elementType: "geometry",
-            stylers: [
-                {
-                    color: "#f5f5f5",
-                },
-                {
-                    lightness: 20,
-                },
-            ],
-        },
-        {
-            featureType: "road.highway",
-            elementType: "geometry.fill",
-            stylers: [
-                {
-                    color: "#ffffff",
-                },
-                {
-                    lightness: 17,
-                },
-            ],
-        },
-        {
-            featureType: "road.highway",
-            elementType: "geometry.stroke",
-            stylers: [
-                {
-                    color: "#ffffff",
-                },
-                {
-                    lightness: 29,
-                },
-                {
-                    weight: 0.2,
-                },
-            ],
-        },
-        {
-            featureType: "road.arterial",
-            elementType: "geometry",
-            stylers: [
-                {
-                    color: "#ffffff",
-                },
-                {
-                    lightness: 18,
-                },
-            ],
-        },
-        {
-            featureType: "road.local",
-            elementType: "geometry",
-            stylers: [
-                {
-                    color: "#ffffff",
-                },
-                {
-                    lightness: 16,
-                },
-            ],
-        },
-        {
-            featureType: "poi",
-            elementType: "geometry",
-            stylers: [
-                {
-                    color: "#f5f5f5",
-                },
-                {
-                    lightness: 21,
-                },
-            ],
-        },
-        {
-            featureType: "poi.park",
-            elementType: "geometry",
-            stylers: [
-                {
-                    color: "#dedede",
-                },
-                {
-                    lightness: 21,
-                },
-            ],
-        },
-        {
-            elementType: "labels.text.stroke",
-            stylers: [
-                {
-                    visibility: "on",
-                },
-                {
-                    color: "#ffffff",
-                },
-                {
-                    lightness: 16,
-                },
-            ],
-        },
-        {
-            elementType: "labels.text.fill",
-            stylers: [
-                {
-                    saturation: 36,
-                },
-                {
-                    color: "#333333",
-                },
-                {
-                    lightness: 40,
-                },
-            ],
-        },
-        {
-            elementType: "labels.icon",
-            stylers: [
-                {
-                    visibility: "off",
-                },
-            ],
-        },
-        {
-            featureType: "transit",
-            elementType: "geometry",
-            stylers: [
-                {
-                    color: "#f2f2f2",
-                },
-                {
-                    lightness: 19,
-                },
-            ],
-        },
-        {
-            featureType: "administrative",
-            elementType: "geometry.fill",
-            stylers: [
-                {
-                    color: "#fefefe",
-                },
-                {
-                    lightness: 20,
-                },
-            ],
-        },
-        {
-            featureType: "administrative",
-            elementType: "geometry.stroke",
-            stylers: [
-                {
-                    color: "#fefefe",
-                },
-                {
-                    lightness: 17,
-                },
-                {
-                    weight: 1.2,
-                },
-            ],
-        },
-    ];
+  var mapType = new google.maps.StyledMapType(style, {
+      name: "Grayscale",
+  });
+  map.mapTypes.set("grey", mapType);
+  map.setMapTypeId("grey");
 
-    var map = new google.maps.Map(document.getElementById("talkMap"), {
-        zoom: 4,
-        center: new google.maps.LatLng(37.0902, -95.7129),
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        draggable: false,
-        panControl: false,
-        scrollwheel: false,
-        zoomControl: false,
-        mapTypeControl: true,
-        scaleControl: false,
-        streetViewControl: false,
-        overviewMapControl: false,
-        disableDoubleClickZoom: true,
-        fullscreenControl: false,
-        zoomControlOptions: {
-            style: google.maps.ZoomControlStyle.LARGE,
-        },
-    });
+  var infowindow = new google.maps.InfoWindow();
 
-    var mapType = new google.maps.StyledMapType(style, {
-        name: "Grayscale",
-    });
-    map.mapTypes.set("grey", mapType);
-    map.setMapTypeId("grey");
+  var marker_image = $("#talkMap").data("pin");
+  var pinIcon = new google.maps.MarkerImage(
+      marker_image,
+      null,
+      null,
+      null,
+      new google.maps.Size(25, 34)
+  );
 
-    var infowindow = new google.maps.InfoWindow();
+  locations.forEach(placeMarker);
 
-    var marker_image = $("#talkMap").data("pin");
-    var pinIcon = new google.maps.MarkerImage(
-        marker_image,
-        null,
-        null,
-        null,
-        new google.maps.Size(25, 34)
-    );
+  function placeMarker(locations) {
+    var contentString =
+        '<div id="content">' +
+        '<div id="siteNotice">' +
+        "</div>" +
+        '<h3 id="firstHeading" class="firstHeading">' +
+        locations.name +
+        "</h3>" +
+        '<div id="bodyContent">' +
+        "<p><b>" + locations.loc + "</b>" +
+        "<p>On " + locations.year + ", I " + locations.action + " at " + locations.name +
+        ". The topic was about " + "<a href='" + locations.presentation + "'" + " target='_blank'>" + locations.title + "</a>" + ".</p>" +
+        "</p>" +
+        '<img src="' + locations.image + '" width="auto" height="auto">' +
+        '<p>Trip Report: <a href="' + locations.report + '" target="_blank">' +
+        "view here</a> " +
+        "</p>" +
+        "</div>" +
+        "</div>";
 
-    var marker, i;
-
-    for (i = 0; i < locations.length; i++) {
-        marker = new google.maps.Marker({
-            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-            map: map,
-            icon: pinIcon,
-        });
-
-        google.maps.event.addListener(
-            marker,
-            "click",
-            (function (marker, i) {
-                return function () {
-                    infowindow.setContent(locations[i][0]);
-                    infowindow.open(map, marker);
-                };
-            })(marker, i)
-        );
-    }
+      var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(locations.lat, locations.long),
+          map: map,
+          icon: pinIcon,
+      });
+      google.maps.event.addListener(marker, "click", function () {
+          infowindow.close();
+          infowindow.setContent(`<div id="infowindow">${contentString}</div>`);
+          infowindow.open(map, marker);
+      });
+  }
 }
-
 
 if ($("#talkMap").length > 0) {
     google.maps.event.addDomListener(window, "load", initializeTalkMap);
