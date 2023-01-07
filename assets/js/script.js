@@ -588,6 +588,19 @@ const locations = [
         lat: 32.7157,
         long: -117.1611,
     },
+    {
+        name: "State Farm",
+        loc: "Dallas, TX",
+        action: "gave a talk",
+        title: "learnings from adding Chaos Monkey to our API and facilitating a Gameday",
+        presentation:
+            "https://soundcloud.com/anthony-dellavecchia/what-is-chaos-engineering?si=ffec7e78bfa5410c9611513b331e8095&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+        report: "",
+        year: "December 2021",
+        image: "/images/talks/cityline.jpg",
+        lat: 32.9483,
+        long: -96.7299,
+    },
 ];
 
 const style = [
